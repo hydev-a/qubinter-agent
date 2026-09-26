@@ -94,6 +94,20 @@ class TestEnsureHermesHome:
             ensure_hermes_home()
             assert soul_path.read_text(encoding="utf-8") == DEFAULT_SOUL_MD
 
+    def test_upgrades_previous_upstream_identity_without_touching_custom_personas(self, tmp_path):
+        from hermes_cli.default_soul import DEFAULT_SOUL_MD, _PRE_QUBINTER_DEFAULT_SOUL_MD
+
+        with patch.dict(os.environ, {"HERMES_HOME": str(tmp_path)}):
+            soul_path = tmp_path / "SOUL.md"
+            soul_path.write_text(_PRE_QUBINTER_DEFAULT_SOUL_MD, encoding="utf-8")
+            ensure_hermes_home()
+            assert soul_path.read_text(encoding="utf-8") == DEFAULT_SOUL_MD
+
+            customized = _PRE_QUBINTER_DEFAULT_SOUL_MD + " Always speak in rhymes."
+            soul_path.write_text(customized, encoding="utf-8")
+            ensure_hermes_home()
+            assert soul_path.read_text(encoding="utf-8") == customized
+
     def test_does_not_upgrade_user_customized_soul_md(self, tmp_path):
         # A SOUL.md that merely starts with the old default but was edited by
         # the user carries real intent and must never be silently overwritten.

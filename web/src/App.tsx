@@ -616,11 +616,13 @@ export default function App() {
               >
                 <PluginSlot name="header-left" />
 
-                <Typography className="font-bold text-[1.125rem] leading-[0.95] tracking-[0.0525rem] text-midground uppercase">
-                  Hermes
-                  <br />
-                  Agent
-                </Typography>
+                <img alt="" className="size-8 shrink-0 rounded-lg" src={`${import.meta.env.BASE_URL}qubinter-icon.png`} />
+                <div className="min-w-0">
+                  <Typography className="font-semibold text-[0.95rem] leading-none tracking-[0.035rem] text-midground uppercase">
+                    Qubinter Agent
+                  </Typography>
+                  <p className="mt-1 text-[0.625rem] leading-tight text-text-secondary">For industries &amp; businesses</p>
+                </div>
               </div>
 
               <Button
@@ -1086,7 +1088,7 @@ function SidebarSystemActions({
         sharedGateway
           ? sharedGatewayRestartDescription(sharedGateway)
           : (t.status.restartGatewayConfirmMessage ??
-            "This restarts the Hermes gateway process. Connected channels and active sessions will reconnect afterward.")
+            "This restarts the Qubinter gateway process. Connected channels and active sessions will reconnect afterward.")
       }
       loading={pendingAction === "restart"}
       onCancel={() => setRestartConfirmOpen(false)}

@@ -70,28 +70,18 @@ def _skin_color(key: str, fallback: str) -> str:
 from hermes_cli import __release_date__ as RELEASE_DATE
 from hermes_cli.version_info import get_version_info
 
-HERMES_AGENT_LOGO = """[bold #FFD700]██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗       █████╗  ██████╗ ███████╗███╗   ██╗████████╗[/]
-[bold #FFD700]██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝      ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝[/]
-[#FFBF00]███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗█████╗███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║[/]
-[#FFBF00]██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║╚════╝██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║[/]
-[#CD7F32]██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║      ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║[/]
-[#CD7F32]╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝[/]"""
+HERMES_AGENT_LOGO = """[#607888]╭────────────────────────────────────╮[/]
+[bold #91b5cc]│  ◈   Q U B I N T E R               │[/]
+[#d09048]│      A G E N T                     │[/]
+[#607888]╰────────────────────────────────────╯[/]"""
 
-HERMES_CADUCEUS = """[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀[/]
-[#FFBF00]⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀[/]
-[#FFD700]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFD700]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#FFBF00]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#CD7F32]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
-[#B8860B]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]"""
+# Keep the legacy constant name because custom skins and older callers import it.
+HERMES_CADUCEUS = """[#607888]       ╭────────────╮[/]
+[#91b5cc]      ╱  ╭──────╮    ╲[/]
+[#91b5cc]     │  │        │    │[/]
+[#91b5cc]     │  │        │    │[/]
+[#d09048]      ╲  ╰──────╯  ╱╲[/]
+[#d09048]       ╰──────────╯  ╲[/]"""
 
 # === Skills scanning ===
 
@@ -210,7 +200,7 @@ def format_banner_version_label() -> str:
 
     stamp = read_install_stamp(get_project_root())
     if stamp.get("distribution") == "desktop-app":
-        label = f"Hermes Agent v{get_version_info().derived_version}"
+        label = f"Qubinter Agent v{get_version_info().derived_version}"
         if stamp.get("source") == "commit-build":
             return f"{label} · commit-build · {str(stamp.get('commit') or '')[:12]}"
         if stamp.get("tag"):
@@ -223,7 +213,7 @@ def format_banner_version_label() -> str:
             return f"{label} · installer"
         return label
 
-    base = f"Hermes Agent v{get_version_info().derived_version} ({RELEASE_DATE})"
+    base = f"Qubinter Agent v{get_version_info().derived_version} ({RELEASE_DATE})"
     from hermes_cli.config import load_config
     from hermes_cli.update_channel import resolve_update_channel
 
@@ -615,7 +605,7 @@ def _banner_left_lines(model: str, cwd: str, session_id, context_length, provide
     lines = []
     pin = " (pinned)" if context_pinned else ""
     ctx_str = _dim_sep(f"{_format_context_length(context_length)} context{pin}") if context_length else ""
-    nous_str = _dim_sep("Nous Research")
+    brand_str = _dim_sep("Qubinter")
     if not (model or "").strip():
         # Credentials resolve lazily on the first message; the banner prints first. Ask the route
         # the same question so a fresh free-tier install shows its model, not a red "unconfigured".
@@ -624,13 +614,13 @@ def _banner_left_lines(model: str, cwd: str, session_id, context_length, provide
         # MoA virtual provider: ``model`` is a preset name; show it with its aggregator.
         agg_label = _quiet(lambda: _moa_aggregator_label(model), "")
         agg_str = _dim_sep(f"agg {agg_label}") if agg_label else ""
-        lines.append(f"[{accent}]MoA: {_short_label(model)}[/]{agg_str}{ctx_str}{nous_str}")
+        lines.append(f"[{accent}]MoA: {_short_label(model)}[/]{agg_str}{ctx_str}{brand_str}")
     elif not (model or "").strip() or (model or "").strip().lower() == "unknown":
         # Unconfigured install: the clearest place to say what is wrong and how to fix it.
         lines.append(f"[bold red]no model configured[/] [dim {dim}]— run /model or hermes setup[/]")
     else:
         model_short = model.split("/")[-1].removesuffix(".gguf")
-        lines.append(f"[{accent}]{_short_label(model_short)}[/]{ctx_str}{nous_str}")
+        lines.append(f"[{accent}]{_short_label(model_short)}[/]{ctx_str}{brand_str}")
     if os.getenv("HERMES_YOLO_MODE"):
         lines.append(f"[bold red]⚠ YOLO mode[/] [dim {dim}]— all approval prompts bypassed[/]")
     lines.append(f"[dim {dim}]{cwd}[/]")

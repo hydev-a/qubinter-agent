@@ -67,18 +67,29 @@ export function webPresetFromShared(
 
 export const defaultTheme: DashboardTheme = {
   name: "default",
-  label: "Hermes Teal",
-  description: "Classic dark teal — the canonical Hermes look",
+  label: "Qubinter",
+  description: "Deep navy, steel blue, and a restrained amber accent",
   palette: {
-    background: { hex: "#041c1c", alpha: 1 },
-    midground: { hex: "#ffe6cb", alpha: 1 },
+    background: { hex: "#102030", alpha: 1 },
+    midground: { hex: "#eaf1f5", alpha: 1 },
     foreground: { hex: "#ffffff", alpha: 0 },
-    warmGlow: "rgba(255, 189, 56, 0.35)",
-    noiseOpacity: 1,
+    warmGlow: "rgba(208, 144, 72, 0.26)",
+    noiseOpacity: 0.25,
   },
   typography: DEFAULT_TYPOGRAPHY,
-  layout: DEFAULT_LAYOUT,
-  terminalBackground: "#000000",
+  layout: { ...DEFAULT_LAYOUT, radius: "0.625rem" },
+  colorOverrides: {
+    card: "#162b3e",
+    cardForeground: "#eaf1f5",
+    popover: "#1b3448",
+    popoverForeground: "#eaf1f5",
+    border: "#355267",
+    ring: "#d09048",
+  },
+  terminalBackground: "#102030",
+  terminalForeground: "#eaf1f5",
+  seriesColors: { inputTokenAccent: "#91b5cc", outputTokenAccent: "#d09048" },
+  swatchColors: ["#102030", "#91b5cc", "#d09048"],
 };
 
 export const midnightTheme: DashboardTheme = {
@@ -202,8 +213,8 @@ export const roseTheme: DashboardTheme = {
 /** Light mode — vivid Nous-blue accents on a cream canvas. */
 export const nousBlueTheme: DashboardTheme = {
   name: "nous-blue",
-  label: "Nous Blue",
-  description: "Light mode — vivid Nous-blue accents on cream canvas",
+  label: "Classic Blue",
+  description: "Light mode with vivid blue accents on a cream canvas",
   palette: {
     background: { hex: "#E8F2FD", alpha: 1 },
     midground: { hex: "#0053FD", alpha: 1 },
@@ -229,16 +240,20 @@ export const nousBlueTheme: DashboardTheme = {
  */
 export const defaultLargeTheme: DashboardTheme = {
   name: "default-large",
-  label: "Hermes Teal (Large)",
-  description: "Hermes Teal with bigger fonts and roomier spacing",
+  label: "Qubinter (Large)",
+  description: "Qubinter with bigger fonts and roomier spacing",
   palette: defaultTheme.palette,
+  colorOverrides: defaultTheme.colorOverrides,
+  seriesColors: defaultTheme.seriesColors,
+  terminalBackground: defaultTheme.terminalBackground,
+  terminalForeground: defaultTheme.terminalForeground,
   typography: {
     ...DEFAULT_TYPOGRAPHY,
     baseSize: "18px",
     lineHeight: "1.65",
   },
   layout: {
-    ...DEFAULT_LAYOUT,
+    ...defaultTheme.layout,
     density: "spacious",
   },
 };

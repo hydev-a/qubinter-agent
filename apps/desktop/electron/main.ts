@@ -1052,7 +1052,7 @@ const BOOT_FAKE_STEP_MS = (() => {
   return Math.max(120, raw)
 })()
 
-const APP_NAME: string = IDENTITY_APP_NAME || process.env.HERMES_DESKTOP_APP_NAME || 'Hermes'
+const APP_NAME: string = IDENTITY_APP_NAME || process.env.HERMES_DESKTOP_APP_NAME || 'Qubinter Agent'
 const HUD_WINDOW_TITLE = `${APP_NAME} HUD`
 const TITLEBAR_HEIGHT = 34
 const MACOS_TRAFFIC_LIGHTS_HEIGHT = 14
@@ -4900,7 +4900,7 @@ async function resolveHermesBackend(backendArgs: string[]): Promise<ResolvedHerm
   //    is a recoverable state the GUI can drive through.
   return {
     kind: 'bootstrap-needed',
-    label: 'Hermes Agent not installed yet; bootstrap required',
+    label: 'Qubinter Agent not installed yet; bootstrap required',
     command: null,
     args: backendArgs,
     bootstrap: true,
@@ -4960,7 +4960,7 @@ async function ensureRuntime(
     rememberLog('[bootstrap] REFUSING installer on a bundled install; payload missing or damaged — reinstall the app')
 
     const bundledError: Error & { isBootstrapFailure?: boolean } = new Error(
-      'This app bundles its own Hermes runtime, but the runtime files are missing or damaged. Reinstall Hermes Desktop to restore it.'
+      'This app bundles its own Hermes runtime, but the runtime files are missing or damaged. Reinstall Qubinter Desktop to restore it.'
     )
 
     bundledError.isBootstrapFailure = true
@@ -12571,7 +12571,7 @@ function reportPrimaryRecoveryCrashLoop(code: number | null, signal: string | nu
   }
 
   const message =
-    'Hermes backend keeps crashing right after it restarts; not restarting it again. Relaunch Hermes Desktop.'
+    'Hermes backend keeps crashing right after it restarts; not restarting it again. Relaunch Qubinter Desktop.'
 
   rememberLog(`[supervisor] ${message}`)
   sendBackendExit({ code, signal, error: message })
@@ -12658,7 +12658,7 @@ async function runHermesStart({ supervisorRecovery = false }: { supervisorRecove
   // otherwise SIGTERMs the running instance's live backend (#87295).
   if (!isPrimaryInstance) {
     rememberLog('[boot] non-primary instance: skipping backend machinery')
-    throw new Error('Hermes Desktop is already running in another window.')
+    throw new Error('Qubinter Desktop is already running in another window.')
   }
 
   await reapOrphanedBackendsOnce()

@@ -1,13 +1,13 @@
-# Hermes Desktop ☤
+# Qubinter Agent Desktop ◈
 
 <p align="center">
-  <a href="https://github.com/NousResearch/hermes-agent/releases"><img src="https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-FFD700?style=for-the-badge" alt="Download"></a>
-  <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://github.com/hydev-a/qubinter-agent/releases"><img src="https://img.shields.io/badge/Download-macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-305078?style=for-the-badge" alt="Download"></a>
+  <a href="https://hermes-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-upstream%20runtime-305078?style=for-the-badge" alt="Upstream runtime documentation"></a>
   <a href="https://discord.gg/NousResearch"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-  <a href="https://github.com/NousResearch/hermes-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://github.com/hydev-a/qubinter-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
 </p>
 
-**The native desktop app for [Hermes Agent](../../README.md) — the self-improving AI agent from [Nous Research](https://nousresearch.com).** Same agent, same skills, same memory as the CLI and gateway, in a polished native window — chat with streaming tool output, side-by-side previews, a file browser, voice, and settings, no terminal required. Available for **macOS, Windows, and Linux**.
+**The native desktop app for Qubinter Agent — an agent for industries and businesses.** It is based on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by [Nous Research](https://nousresearch.com), with the same agent core, skills, and memory across the CLI and gateway. The desktop app offers streaming chat, side-by-side previews, a file browser, voice, and settings on **macOS, Windows, and Linux**.
 
 <table>
 <tr><td><b>Chat with the full agent</b></td><td>Streaming responses, live tool activity, structured tool summaries, and the same conversation history as every other Hermes surface.</td></tr>
@@ -34,7 +34,7 @@ It builds and launches the GUI against your existing install — same config, ke
 
 ### Prebuilt installers
 
-Prebuilt installers are built and distributed via [the Hermes Desktop website.](https://hermes-agent.nousresearch.com/).
+Qubinter desktop installers will appear on [the fork's releases page](https://github.com/hydev-a/qubinter-agent/releases) when published.
 
 ---
 
@@ -250,9 +250,9 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\hermes\hermes-agent\venv"
 
 ## Community
 
-- 💬 [Discord](https://discord.gg/NousResearch)
-- 📖 [Documentation](https://hermes-agent.nousresearch.com/docs/)
-- 🐛 [Issues](https://github.com/NousResearch/hermes-agent/issues)
+- 💬 [Upstream Discord](https://discord.gg/NousResearch)
+- 📖 [Upstream runtime documentation](https://hermes-agent.nousresearch.com/docs/)
+- 🐛 [Qubinter Issues](https://github.com/hydev-a/qubinter-agent/issues)
 
 ---
 
@@ -260,4 +260,4 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\hermes\hermes-agent\venv"
 
 MIT — see [LICENSE](../../LICENSE).
 
-Built by [Nous Research](https://nousresearch.com).
+Qubinter Agent is based on [Hermes Agent](https://github.com/NousResearch/hermes-agent) by [Nous Research](https://nousresearch.com).

@@ -29,7 +29,7 @@ export const frOverrides = {
     ownerMissing: 'Rouvrez cette conversation pour gérer ses connexions.',
     search: 'Rechercher une application',
     empty: 'Aucune application correspondante',
-    disclaimer: "La connexion est facultative. N'autorisez que les applications que vous voulez confier à Hermes.",
+    disclaimer: "La connexion est facultative. N'autorisez que les applications que vous voulez confier à Qubinter.",
     execution: 'Outils des connecteurs',
     setup: server => `Configurer ${server}`,
     openInBrowser: 'Ouvrir dans le navigateur',
@@ -62,7 +62,7 @@ export const frOverrides = {
       kindCatalog: 'MCP · Catalogue',
       kindCustom: 'MCP · Personnalisé',
       kindPlugin: (plugin: string) => `MCP · Plugin ${plugin}`,
-      inCatalog: 'Dans le catalogue Hermes',
+      inCatalog: 'Dans le catalogue Qubinter',
       hostedTwin: 'Version gérée disponible',
       alsoLocal: 'Fonctionne aussi sur cet appareil',
       open: (name: string) => `Ouvrir ${name}`,
@@ -111,7 +111,7 @@ export const frOverrides = {
       loading: 'Lecture du catalogue et des serveurs de cet ordinateur',
       emptyTitle: 'Aucune application pour le moment. Ajoutez un serveur sur cet ordinateur pour commencer.',
       noMatchTitle: 'Aucune application correspondante',
-      noMatchBody: 'Aucun résultat. Indiquez à Hermes votre propre serveur MCP pour l’ajouter.',
+      noMatchBody: 'Aucun résultat. Indiquez à Qubinter votre propre serveur MCP pour l’ajouter.',
       clearSearch: 'Effacer la recherche',
       hostedFailedTitle: 'Impossible de joindre les applications hébergées.',
       hostedFailedBody:
@@ -127,7 +127,7 @@ export const frOverrides = {
       managedUnavailable: 'Les applications gérées ne sont pas encore disponibles pour ce compte.',
       writeFailed: 'Cette modification n’a pas été enregistrée.',
       refreshFailed: 'La liste des outils n’a pas été actualisée.',
-      disconnectNoAccount: 'Hermes n’a aucun compte à déconnecter ici. Actualisez la page et réessayez.',
+      disconnectNoAccount: 'Qubinter n’a aucun compte à déconnecter ici. Actualisez la page et réessayez.',
       disconnectRefused:
         'Nous ne peut pas supprimer cette connexion pour le moment. Désactivez plutôt l’application avec l’interrupteur, ou réessayez plus tard.'
     },
@@ -167,23 +167,23 @@ export const frOverrides = {
     dialog: {
       disconnect: 'Déconnecter',
       disconnectTitle: (name: string) => `Déconnecter ${name} ?`,
-      disconnectBody: "Hermes cesse d'agir avec ce compte. Vous pouvez vous reconnecter à tout moment.",
+      disconnectBody: "Qubinter cesse d'agir avec ce compte. Vous pouvez vous reconnecter à tout moment.",
       menuRefreshTools: 'Actualiser les outils',
       moreActions: "Plus d'actions",
       removeServerTitle: (name: string) => `Supprimer ${name} ?`,
       removeServerBody: "L'entrée est retirée de mcp.json sur cet ordinateur. Rien d'autre n'est supprimé.",
-      appSwitch: (name: string) => `Hermes peut utiliser ${name}`,
+      appSwitch: (name: string) => `Qubinter peut utiliser ${name}`,
       waysTitle: (name: string) => `Où ${name} s'exécute`,
       wayNotConnected: (name: string) => `Pas encore connecté. Connectez-vous à ${name} dans votre navigateur.`,
       wayHosted: 'Géré',
-      bothOn: (name: string) => `Les deux sont activés : Hermes voit donc chaque outil ${name} en double.`,
+      bothOn: (name: string) => `Les deux sont activés : Qubinter voit donc chaque outil ${name} en double.`,
       turnOffLocal: 'Désactiver le serveur local',
       providedByPlugin: (plugin: string) => `Fourni par le plugin ${plugin}`,
       openPlugins: "Ouvrir l'onglet Plugins",
       nousLine: 'Les applications Nous suivent votre compte, pas le profil.',
       rulesReadOnly: 'Les règles ne peuvent pas être modifiées pour le moment.',
       rulesAppOff: (name: string) => `Activez ${name} pour modifier ses outils.`,
-      rulesSignIn: 'Connectez-vous pour modifier ce que Hermes peut faire ici.',
+      rulesSignIn: 'Connectez-vous pour modifier ce que Qubinter peut faire ici.',
       orgNote: (count: number) => `Votre organisation a désactivé ${count} outil${count > 1 ? 's' : ''}.`,
       orgLink: "Ouvrir l'administration des connecteurs",
       connectEnded: "La connexion n'a pas abouti.",
@@ -196,8 +196,8 @@ export const frOverrides = {
     tools: {
       title: 'Outils',
       notInstalledBody: "Installez-le sur cet appareil pour voir les outils qu'il apporte.",
-      summaryTitle: (name: string) => `Ce que Hermes peut faire avec ${name}`,
-      summaryPreviewTitle: (name: string) => `Ce que Hermes pourra faire avec ${name} une fois connecté`,
+      summaryTitle: (name: string) => `Ce que Qubinter peut faire avec ${name}`,
+      summaryPreviewTitle: (name: string) => `Ce que Qubinter pourra faire avec ${name} une fois connecté`,
       summaryCount: (count: number) => `${count} outil${count > 1 ? 's' : ''}`,
       summaryAllTools: 'Tous les outils',
       summaryOther: 'Autres',
@@ -230,7 +230,7 @@ export const frOverrides = {
       needsAuthBody: 'La connexion reste sur cet ordinateur. Rien ne le quitte.',
       retry: 'Réessayer',
       goneTitle: (name: string) => `${name} a quitté le catalogue.`,
-      goneBody: "Hermes ne peut plus l'appeler. La ligne reste jusqu'à ce que vous la supprimiez : rien ne disparaît.",
+      goneBody: "Qubinter ne peut plus l'appeler. La ligne reste jusqu'à ce que vous la supprimiez : rien ne disparaît.",
       remove: 'Supprimer',
       offTitle: (name: string) => `${name} est désactivé.`,
       offBody: "Activez-le avec l'interrupteur ci-dessus pour lire les outils qu'il apporte.",
@@ -307,7 +307,7 @@ export const frOverrides = {
   },
   sessionImport: {
     title: 'Reprendre depuis une autre application',
-    subtitle: 'Importez une conversation dans Hermes et reprenez là où vous en étiez.',
+    subtitle: 'Importez une conversation dans Qubinter et reprenez là où vous en étiez.',
     action: 'Importer une session',
     readingFrom: 'Lecture depuis',
     connectedComputer: "l'ordinateur connecté",
@@ -325,18 +325,18 @@ export const frOverrides = {
     more: 'Charger davantage de sessions',
     messages: 'messages',
     choose: 'Une conversation à poursuivre',
-    chooseHelp: "Choisissez une session pour lire son historique avant de l'importer dans Hermes.",
+    chooseHelp: "Choisissez une session pour lire son historique avant de l'importer dans Qubinter.",
     previewLoading: "Ouverture de l'aperçu",
     previewError: 'Aperçu indisponible',
     previewHelp: 'La source a peut-être été déplacée ou modifiée. Actualisez la liste et réessayez.',
     previewLimit: 'Aperçu abrégé pour faciliter la lecture. La conversation est importée dans son intégralité.',
     you: 'Vous',
-    snapshot: 'Cette conversation est déjà dans Hermes. Ouvrez votre copie existante pour continuer.',
+    snapshot: 'Cette conversation est déjà dans Qubinter. Ouvrez votre copie existante pour continuer.',
     copyNotice:
       'Copie le texte de la conversation sans modifier les fichiers sources. Les résultats des outils et le raisonnement ne sont pas transférés.',
     importing: 'Importation…',
-    open: 'Ouvrir dans Hermes',
-    continue: 'Continuer dans Hermes',
+    open: 'Ouvrir dans Qubinter',
+    continue: 'Continuer dans Qubinter',
     importError: "Impossible d'importer cette conversation."
   },
   common: {
@@ -403,21 +403,21 @@ export const frOverrides = {
       "Ce chemin n'est pas sur cet ordinateur : il se trouve sur la machine du backend. Utilisez « Afficher dans l'arborescence »."
   },
   boot: {
-    ready: 'Hermes Desktop est prêt',
+    ready: 'Qubinter Desktop est prêt',
     desktopBootFailedWithMessage: message => `Échec du démarrage : ${message}`,
     steps: {
       connectingGateway: 'Connexion au gateway desktop',
-      loadingSettings: 'Chargement des paramètres Hermes',
+      loadingSettings: 'Chargement des paramètres Qubinter',
       loadingSessions: 'Chargement des sessions récentes',
-      retryingRemoteBackend: 'Reconnexion au backend Hermes distant…',
+      retryingRemoteBackend: 'Reconnexion au backend Qubinter distant…',
       startingDesktopConnection: 'Démarrage de la connexion desktop',
-      startingHermesDesktop: 'Démarrage de Hermes Desktop…'
+      startingHermesDesktop: 'Démarrage de Qubinter Desktop…'
     },
     errors: {
-      backgroundExited: "Le processus en arrière-plan de Hermes s'est arrêté.",
-      backgroundExitedDuringStartup: "Le processus en arrière-plan de Hermes s'est arrêté pendant le démarrage.",
+      backgroundExited: "Le processus en arrière-plan de Qubinter s'est arrêté.",
+      backgroundExitedDuringStartup: "Le processus en arrière-plan de Qubinter s'est arrêté pendant le démarrage.",
       backendStopped: 'Backend arrêté',
-      restartHermes: 'Redémarrer Hermes',
+      restartHermes: 'Redémarrer Qubinter',
       openLogs: 'Ouvrir les journaux',
       desktopBootFailed: 'Échec du démarrage',
       gatewayConnectionLost: 'Connexion au gateway perdue',
@@ -432,16 +432,16 @@ export const frOverrides = {
       ipcBridgeUnavailable: 'Le pont IPC du desktop est indisponible.'
     },
     causes: {
-      exitedEarly: "Le service en arrière-plan de Hermes s'est arrêté juste après son démarrage.",
-      timedOut: "Le service en arrière-plan de Hermes n'a pas répondu à temps.",
-      permission: "Hermes n'a pas pu écrire dans son dossier de données (problème d'autorisation).",
-      diskFull: "Le disque est plein ; Hermes n'a donc pas pu démarrer.",
-      portInUse: 'Un autre programme utilise le port réseau nécessaire à Hermes.',
+      exitedEarly: "Le service en arrière-plan de Qubinter s'est arrêté juste après son démarrage.",
+      timedOut: "Le service en arrière-plan de Qubinter n'a pas répondu à temps.",
+      permission: "Qubinter n'a pas pu écrire dans son dossier de données (problème d'autorisation).",
+      diskFull: "Le disque est plein ; Qubinter n'a donc pas pu démarrer.",
+      portInUse: 'Un autre programme utilise le port réseau nécessaire à Qubinter.',
       installMissing:
-        "Une partie de l'installation de Hermes est manquante. Choisissez Réparer l'installation pour la restaurer."
+        "Une partie de l'installation de Qubinter est manquante. Choisissez Réparer l'installation pour la restaurer."
     },
     failure: {
-      title: "Hermes n'a pas pu démarrer",
+      title: "Qubinter n'a pas pu démarrer",
       description:
         "Le gateway en arrière-plan n'a pas pu se lancer. Essayez l'une des étapes de récupération ci-dessous. Rien ici ne supprime vos conversations ou paramètres.",
       details: 'Détails',
@@ -491,13 +491,13 @@ export const frOverrides = {
     copyDetailFailed: 'Impossible de copier le détail de la notification',
     backendOutOfDateTitle: 'Backend obsolète',
     backendOutOfDateMessage:
-      'Votre backend Hermes est plus ancien que cette version du desktop et peut ne pas fonctionner correctement. Mettez-le à jour pour les aligner.',
-    desktopOutOfDateTitle: 'Application Hermes obsolète',
+      'Votre backend Qubinter est plus ancien que cette version du desktop et peut ne pas fonctionner correctement. Mettez-le à jour pour les aligner.',
+    desktopOutOfDateTitle: 'Application Qubinter obsolète',
     desktopOutOfDateMessage:
-      "Cette application Hermes est plus ancienne que le backend auquel elle est connectée et peut ne pas fonctionner correctement. Effectuez la mise à jour de l'application pour les aligner.",
+      "Cette application Qubinter est plus ancienne que le backend auquel elle est connectée et peut ne pas fonctionner correctement. Effectuez la mise à jour de l'application pour les aligner.",
     updateDesktopApp: "Mettre à jour l'application",
     installMethodUnsupportedTitle: "Méthode d'installation non prise en charge",
-    updateHermes: 'Mettre à jour Hermes',
+    updateHermes: 'Mettre à jour Qubinter',
     updateReadyTitle: 'Mise à jour prête',
     updateReadyMessage: count =>
       `${count} ${count === 1 ? 'nouvelle modification disponible' : 'nouvelles modifications disponibles'}.`,
@@ -519,20 +519,20 @@ export const frOverrides = {
       elevenLabsRejectedKey: 'ElevenLabs a rejeté la clé API (401).',
       diskFull: "Le disque est plein. Libérez de l'espace disque, puis réessayez.",
       storageFailure:
-        "Hermes n'a pas pu enregistrer dans son dossier de données. Ouvrez Maintenance pour le vérifier et le réparer.",
+        "Qubinter n'a pas pu enregistrer dans son dossier de données. Ouvrez Maintenance pour le vérifier et le réparer.",
       gatewayAuthFailed: "Échec de l'authentification du gateway — vérifiez API_SERVER_KEY.",
       methodNotAllowed:
-        'Le backend du desktop a rejeté cette requête (405 Method Not Allowed). Essayez de redémarrer Hermes Desktop.',
+        'Le backend du desktop a rejeté cette requête (405 Method Not Allowed). Essayez de redémarrer Qubinter Desktop.',
       microphonePermission: "L'autorisation du microphone a été refusée.",
       openaiRejectedApiKey: 'OpenAI a rejeté la clé API.',
       openaiTtsNeedsKey: 'TTS OpenAI nécessite VOICE_TOOLS_OPENAI_KEY ou OPENAI_API_KEY.',
       codeSkewRestartRequired:
         "Ce backend exécute encore l'ancien code après une mise à jour. Redémarrez-le pour charger le nouveau code.",
       rpcOutOfSync: "L'application et le backend ne sont pas sur la même version. Mettez-les tous les deux à jour.",
-      restartHermesFailed: 'Impossible de redémarrer Hermes'
+      restartHermesFailed: 'Impossible de redémarrer Qubinter'
     },
     actions: {
-      restartHermes: 'Redémarrer Hermes',
+      restartHermes: 'Redémarrer Qubinter',
       openKeys: 'Ouvrir les clés',
       openGateways: 'Ouvrir les gateways',
       openMaintenance: 'Ouvrir Maintenance'
@@ -560,7 +560,7 @@ export const frOverrides = {
       liveEndedConnectionLost: 'La session vocale en direct a perdu sa connexion.',
       liveEndedClosed: 'La session vocale en direct a été fermée par le service.',
       liveError: 'Voix en direct',
-      liveDelegationFailed: 'Impossible de transmettre la demande à Hermes',
+      liveDelegationFailed: 'Impossible de transmettre la demande à Qubinter',
       liveUnavailable: reason =>
         `Le chat vocal GPT-Live n'est pas disponible : ${reason}. Utilisation de la reconnaissance vocale à la place.`
     },
@@ -571,8 +571,8 @@ export const frOverrides = {
       rejectAction: 'Rejeter',
       inputTitle: 'Saisie requise',
       inputTitleNamed: session => `Saisie requise — ${session}`,
-      inputBody: 'Hermes attend votre réponse.',
-      turnDoneTitle: 'Hermes a terminé',
+      inputBody: 'Qubinter attend votre réponse.',
+      turnDoneTitle: 'Qubinter a terminé',
       turnDoneBody: '',
       turnErrorTitle: 'Échec du tour',
       backgroundDoneTitle: 'Tâche en arrière-plan terminée',
@@ -817,7 +817,7 @@ export const frOverrides = {
     exportConfig: 'Exporter la configuration',
     importConfig: 'Importer la configuration',
     resetToDefaults: 'Réinitialiser aux valeurs par défaut',
-    resetConfirm: 'Réinitialiser tous les paramètres aux valeurs par défaut de Hermes ?',
+    resetConfirm: 'Réinitialiser tous les paramètres aux valeurs par défaut de Qubinter ?',
     exportFailed: "Échec de l'export",
     resetFailed: 'Échec de la réinitialisation',
     nav: {
@@ -873,7 +873,7 @@ export const frOverrides = {
         agentTargetLocal: (profile, dir) => `Installe dans le backend ${profile} (${dir})`,
         agentTargetRemote: profile => `S'installe dans le backend ${profile} connecté`,
         catalogPinned: (name, sha) =>
-          `Entrée « ${name} » du catalogue Hermes — le composant agent sera installé depuis le commit vérifié${sha ? ` ${sha}` : ''}, et non depuis la tête de branche.`,
+          `Entrée « ${name} » du catalogue Qubinter — le composant agent sera installé depuis le commit vérifié${sha ? ` ${sha}` : ''}, et non depuis la tête de branche.`,
         reviewedHeading: 'Entrée du catalogue vérifiée',
         reviewedIntro:
           'Cette entrée a été vérifiée manuellement à son commit épinglé. Vous pouvez encore examiner le code exact ci-dessous.',
@@ -915,7 +915,7 @@ export const frOverrides = {
         desktopSuccess: name => `Plugin Desktop ${name} installé`,
         agentFailed: "Échec de l'installation du plugin de l'agent",
         installUncertain:
-          "Hermes n'attend plus le résultat de l'installation, mais le plugin est peut-être encore en cours d'installation. Fermez cette fenêtre et actualisez la liste des plugins avant de relancer l'installation.",
+          "Qubinter n'attend plus le résultat de l'installation, mais le plugin est peut-être encore en cours d'installation. Fermez cette fenêtre et actualisez la liste des plugins avant de relancer l'installation.",
         desktopFailed: "Échec de l'installation du plugin Desktop",
         missingEnv: (name, vars) =>
           `${name} est installé, mais a besoin d'une clé pour fonctionner : ${vars}. Ajoutez-la maintenant, sinon les outils du plugin échoueront.`
@@ -987,12 +987,12 @@ export const frOverrides = {
           "Les gestionnaires de mots de passe installés sont repérés automatiquement. L'agent vous demande de déverrouiller l'un la première fois qu'il en a besoin (une fois par session) ; seul un jeton de session reste en mémoire, et l'agent ne voit jamais votre mot de passe principal ou aucun identifiant.",
         toggleFailed: 'Impossible de mettre à jour le gestionnaire de mots de passe',
         notInstalled: name =>
-          `Non détecté. Installez l’outil en ligne de commande ${name} et connectez-vous ; Hermes le repère automatiquement.`,
-        disabledDesc: 'Détecté mais désactivé pour Hermes.',
+          `Non détecté. Installez l’outil en ligne de commande ${name} et connectez-vous ; Qubinter le repère automatiquement.`,
+        disabledDesc: 'Détecté mais désactivé pour Qubinter.',
         lockedDesc:
           "Détecté. L'agent vous demandera de le déverrouiller lorsqu'il en a besoin, ou déverrouillez maintenant.",
         unlockedDesc:
-          "Déverrouillé pour cette session. Se verrouille automatiquement après 30 minutes d'inactivité ou lorsque Hermes se ferme.",
+          "Déverrouillé pour cette session. Se verrouille automatiquement après 30 minutes d'inactivité ou lorsque Qubinter se ferme.",
         statusLocked: 'Verrouillé',
         statusNotDetected: 'Non détecté',
         statusOff: 'Désactivé',
@@ -1012,7 +1012,7 @@ export const frOverrides = {
       intro: "Notifications système (pas les toasts de l'application). Par appareil.",
       enableAll: 'Activer les notifications',
       enableAllDesc: 'Désactivé coupe toutes les notifications ci-dessous.',
-      focusedHint: 'Les alertes de fin ne se déclenchent que quand Hermes est en arrière-plan.',
+      focusedHint: 'Les alertes de fin ne se déclenchent que quand Qubinter est en arrière-plan.',
       kinds: {
         approval: {
           label: 'Approbation requise',
@@ -1020,11 +1020,11 @@ export const frOverrides = {
         },
         input: {
           label: 'Saisie requise',
-          description: "Hermes a posé une question ou a besoin d'un mot de passe ou d'un secret."
+          description: "Qubinter a posé une question ou a besoin d'un mot de passe ou d'un secret."
         },
         turnDone: {
           label: 'Réponse prête',
-          description: "Un tour s'est terminé pendant que Hermes était en arrière-plan."
+          description: "Un tour s'est terminé pendant que Qubinter était en arrière-plan."
         },
         turnError: {
           label: 'Échec du tour',
@@ -1040,11 +1040,11 @@ export const frOverrides = {
         },
         plugin: {
           label: 'Notifications des plugins',
-          description: 'Un plugin desktop a envoyé une notification pendant que Hermes était en arrière-plan.'
+          description: 'Un plugin desktop a envoyé une notification pendant que Qubinter était en arrière-plan.'
         }
       },
       test: 'Envoyer une notification de test',
-      testTitle: 'Hermes',
+      testTitle: 'Qubinter',
       testBody: 'Les notifications fonctionnent.',
       testSent:
         "Test envoyé. Si rien n'apparaît, vérifiez les autorisations de notification de votre système et le mode Ne pas déranger.",
@@ -1064,7 +1064,7 @@ export const frOverrides = {
       advanced: 'Avancé'
     },
     searchPlaceholder: {
-      about: 'À propos de Hermes Desktop',
+      about: 'À propos de Qubinter Desktop',
       config: 'Rechercher dans les paramètres...',
       gateway: 'Connexion au gateway...',
       keys: 'Rechercher des clés API...',
@@ -1090,7 +1090,7 @@ export const frOverrides = {
       intro:
         'Exclusif au desktop. Le mode contrôle la luminosité ; le thème contrôle la palette et le chrome de la conversation.',
       colorMode: 'Mode couleur',
-      colorModeDesc: 'Choisissez un mode fixe ou laissez Hermes suivre le paramètre système.',
+      colorModeDesc: 'Choisissez un mode fixe ou laissez Qubinter suivre le paramètre système.',
       toolViewTitle: "Affichage des appels d'outil",
       toolViewDesc:
         'Le mode Produit masque les charges utiles brutes ; le mode Technique affiche les entrées/sorties complètes.',
@@ -1166,15 +1166,15 @@ export const frOverrides = {
       introSplashTitle: "Écran d'accueil",
       introSplashDesc: "Le logo et l'invite affichés dans une conversation vide.",
       reactionsTitle: 'Réactions aux messages',
-      reactionsDesc: 'Réactions emoji façon iMessage — réagissez aux messages, et Hermes peut réagir aux vôtres.',
+      reactionsDesc: 'Réactions emoji façon iMessage — réagissez aux messages, et Qubinter peut réagir aux vôtres.',
       tipsTitle: "Astuces dans l'application",
       tipsDesc:
-        "Une petite bulle désigne occasionnellement une partie de l'application lorsque vous êtes inactif ou lorsque Hermes peut vous aider. Fermer une astuce la masque définitivement.",
+        "Une petite bulle désigne occasionnellement une partie de l'application lorsque vous êtes inactif ou lorsque Qubinter peut vous aider. Fermer une astuce la masque définitivement.",
       tipsReset: (count: number) =>
         `Réafficher ${count} astuce${count === 1 ? '' : 's'} fermée${count === 1 ? '' : 's'}`,
       toursTitle: 'Visites guidées',
       toursDesc:
-        "Laissez Hermes vous guider dans l'application en assombrissant l'écran et en mettant chaque étape en évidence.",
+        "Laissez Qubinter vous guider dans l'application en assombrissant l'écran et en mettant chaque étape en évidence.",
       composerPopoutTitle: 'Détacher la zone de saisie',
       composerPopoutDesc: "Autoriser la zone de saisie à s'ouvrir dans une fenêtre flottante distincte.",
       vibeHeartsTitle: "Cœurs d'ambiance",
@@ -1212,9 +1212,9 @@ export const frOverrides = {
       pet: {
         title: 'Animal de compagnie',
         intro:
-          "Adoptez une mascotte petdex animée qui flotte au-dessus de l'application et réagit aux actions de Hermes — court pendant l'exécution des outils, fête les réussites, boude les erreurs.",
+          "Adoptez une mascotte petdex animée qui flotte au-dessus de l'application et réagit aux actions de Qubinter — court pendant l'exécution des outils, fête les réussites, boude les erreurs.",
         restartHint:
-          "Les animaux de compagnie nécessitent un redémarrage rapide — l'application en cours a démarré avant l'ajout de cette fonctionnalité. Fermez et rouvrez Hermes, puis revenez ici.",
+          "Les animaux de compagnie nécessitent un redémarrage rapide — l'application en cours a démarré avant l'ajout de cette fonctionnalité. Fermez et rouvrez Qubinter, puis revenez ici.",
         scaleTitle: 'Taille',
         scaleDesc: "Redimensionnez la mascotte flottante. S'applique partout instantanément.",
         roamTitle: 'Errer',
@@ -1442,11 +1442,11 @@ export const frOverrides = {
       timezone: 'Identifiant de fuseau horaire IANA. Si vide, utilise le fuseau horaire du système.',
       browser: {
         useRealProfile:
-          'La navigation locale utilise vos vraies connexions. Hermes copie le profil de votre navigateur par défaut (cookies, connexions, préférences) dans un instantané géré et le pilote avec son Chromium intégré — votre profil actif n’est jamais ouvert directement, et la copie est actualisée à chaque exécution. Permet aussi à l’agent d’ouvrir sur demande une session locale avec votre vrai profil, même si un backend de navigateur cloud est configuré. Seuls les navigateurs Chromium (Chrome, Edge, Brave, Brave Origin, Chromium) sont pris en charge ; un navigateur par défaut non Chromium échoue avec un message clair. Désactivé par défaut.'
+          'La navigation locale utilise vos vraies connexions. Qubinter copie le profil de votre navigateur par défaut (cookies, connexions, préférences) dans un instantané géré et le pilote avec son Chromium intégré — votre profil actif n’est jamais ouvert directement, et la copie est actualisée à chaque exécution. Permet aussi à l’agent d’ouvrir sur demande une session locale avec votre vrai profil, même si un backend de navigateur cloud est configuré. Seuls les navigateurs Chromium (Chrome, Edge, Brave, Brave Origin, Chromium) sont pris en charge ; un navigateur par défaut non Chromium échoue avec un message clair. Désactivé par défaut.'
       },
       agent: {
         imageInputMode: 'Contrôle la façon dont les pièces jointes image sont envoyées au modèle.',
-        maxTurns: "Limite supérieure de tours d'appel d'outils avant que Hermes n'arrête une exécution."
+        maxTurns: "Limite supérieure de tours d'appel d'outils avant que Qubinter n'arrête une exécution."
       },
       terminal: {
         cwd: 'Dossier de projet par défaut pour les outils et le terminal.',
@@ -1460,9 +1460,9 @@ export const frOverrides = {
       codeExecution: {
         mode: "Degré de restriction de l'exécution du code au projet actuel."
       },
-      fileReadMaxChars: 'Nombre maximal de caractères que Hermes peut lire dans une demande de fichier.',
+      fileReadMaxChars: 'Nombre maximal de caractères que Qubinter peut lire dans une demande de fichier.',
       approvals: {
-        mode: 'Comment Hermes gère les commandes nécessitant une approbation explicite.',
+        mode: 'Comment Qubinter gère les commandes nécessitant une approbation explicite.',
         timeout: "Durée d'attente des invites d'approbation avant expiration."
       },
       security: {
@@ -1491,11 +1491,11 @@ export const frOverrides = {
       voice: {
         autoTts: "Lit automatiquement les réponses de l'assistant à voix haute.",
         voiceChatMode:
-          'chained : reconnaissance vocale → Hermes → synthèse vocale avec les fournisseurs ci-dessous. gpt-live : un modèle vocal OpenAI full-duplex (gpt-live-1) écoute et parle, et confie chaque vraie demande à Hermes — le modèle que vous avez sélectionné répond avec l’ensemble des outils. Nécessite une clé API OpenAI ; la couche vocale est facturée 0,05 $ par minute.',
+          'chained : reconnaissance vocale → Qubinter → synthèse vocale avec les fournisseurs ci-dessous. gpt-live : un modèle vocal OpenAI full-duplex (gpt-live-1) écoute et parle, et confie chaque vraie demande à Qubinter — le modèle que vous avez sélectionné répond avec l’ensemble des outils. Nécessite une clé API OpenAI ; la couche vocale est facturée 0,05 $ par minute.',
         gptLive: {
           voice: 'Voix du mode GPT-Live. Les identifiants de voix personnalisés sont acceptés.',
           instructions:
-            'Phrases supplémentaires pour la personnalité vocale en direct (ton, rythme, langue). Hermes conserve son propre prompt système.'
+            'Phrases supplémentaires pour la personnalité vocale en direct (ton, rythme, langue). Qubinter conserve son propre prompt système.'
         }
       },
       tts: {
@@ -1523,13 +1523,13 @@ export const frOverrides = {
       },
       updates: {
         nonInteractiveLocalChanges:
-          "Quand Hermes se met à jour depuis l'application (sans invite de terminal), conserve les modifications locales (stash) ou les abandonne (discard). Les mises à jour via le terminal demandent toujours confirmation."
+          "Quand Qubinter se met à jour depuis l'application (sans invite de terminal), conserve les modifications locales (stash) ou les abandonne (discard). Les mises à jour via le terminal demandent toujours confirmation."
       }
     }),
     uninstallSection: {
       dangerZone: 'Zone dangereuse',
       checkingInstalled: 'Vérification des éléments installés…',
-      uninstallHermes: 'Désinstaller Hermes',
+      uninstallHermes: 'Désinstaller Qubinter',
       chooseHowMuch:
         'Choisissez ce que vous souhaitez supprimer. L’application se ferme pour terminer ; rouvrez le programme d’installation à tout moment pour revenir.',
       confirmUninstall: 'Confirmer la désinstallation',
@@ -1542,22 +1542,22 @@ export const frOverrides = {
         gui: {
           title: 'Désinstaller uniquement l’interface de chat',
           description:
-            'Supprime cette application de bureau. L’agent Hermes, votre configuration et vos conversations sont conservés.',
+            'Supprime cette application de bureau. L’agent Qubinter, votre configuration et vos conversations sont conservés.',
           consequence: 'l’interface de chat de bureau (cette application et ses données)'
         },
         lite: {
           title: 'Désinstaller l’interface et l’agent, conserver mes données',
           description:
-            'Supprime l’application et l’agent Hermes, mais conserve la configuration, les conversations et les secrets pour une future réinstallation.',
+            'Supprime l’application et l’agent Qubinter, mais conserve la configuration, les conversations et les secrets pour une future réinstallation.',
           consequence:
-            'l’interface de chat et l’agent Hermes (la configuration, les conversations et les secrets sont conservés)'
+            'l’interface de chat et l’agent Qubinter (la configuration, les conversations et les secrets sont conservés)'
         },
         full: {
           title: 'Tout désinstaller',
           description:
             'Supprime l’application, l’agent et toutes les données utilisateur : configuration, conversations, tâches planifiées, secrets, journaux.',
           consequence:
-            'TOUT — l’interface de chat, l’agent Hermes et l’ensemble de votre configuration, de vos conversations, secrets et journaux'
+            'TOUT — l’interface de chat, l’agent Qubinter et l’ensemble de votre configuration, de vos conversations, secrets et journaux'
         }
       }
     },
@@ -1620,7 +1620,7 @@ export const frOverrides = {
     config: {
       minimizeToTrayTitle: 'Réduire dans la barre d’état',
       minimizeToTrayDesc:
-        'Réduire les fenêtres ou fermer la fenêtre principale les masque dans la zone de notification (barre des menus sur macOS) et Hermes continue de s’exécuter. Utilisez Quitter Hermes dans le menu de la zone de notification ou Cmd+Q pour quitter. Désactivé par défaut ; s’applique uniquement à cet appareil.',
+        'Réduire les fenêtres ou fermer la fenêtre principale les masque dans la zone de notification (barre des menus sur macOS) et Qubinter continue de s’exécuter. Utilisez Quitter Qubinter dans le menu de la zone de notification ou Cmd+Q pour quitter. Désactivé par défaut ; s’applique uniquement à cet appareil.',
       minimizeToTrayUnavailable:
         'La zone de notification est indisponible. Les fenêtres seront réduites et fermées normalement. Désactivez puis réactivez cette option pour réessayer.',
       none: 'Aucun',
@@ -1631,7 +1631,7 @@ export const frOverrides = {
       searchPlaceholder: 'Rechercher…',
       noResults: 'Aucun résultat trouvé',
       systemDefault: 'Par défaut du système',
-      loading: 'Chargement de la configuration Hermes...',
+      loading: 'Chargement de la configuration Qubinter...',
       emptyTitle: 'Rien à configurer',
       emptyDesc: 'Cette section ne contient aucun paramètre ajustable.',
       failedLoad: 'Échec du chargement des paramètres',
@@ -1658,27 +1658,27 @@ export const frOverrides = {
       description:
         'Appuyez puis relâchez ⌘ + Option sur Mac, ou Ctrl + Alt sous Windows/Linux, pour afficher le HUD depuis n’importe quelle application. Désactivé par défaut ; s’applique uniquement à cet appareil.',
       permission:
-        'Autorisez Hermes dans Réglages Système → Confidentialité et sécurité → Surveillance de l’entrée, puis réessayez. Ce geste n’enregistre pas les frappes et ne capture pas votre écran.',
+        'Autorisez Qubinter dans Réglages Système → Confidentialité et sécurité → Surveillance de l’entrée, puis réessayez. Ce geste n’enregistre pas les frappes et ne capture pas votre écran.',
       unavailable:
-        'L’assistant du geste HUD n’a pas pu démarrer ou s’est arrêté de manière inattendue. Réessayez ou redémarrez Hermes. Le raccourci HUD existant fonctionne toujours dans Hermes.',
+        'L’assistant du geste HUD n’a pas pu démarrer ou s’est arrêté de manière inattendue. Réessayez ou redémarrez Qubinter. Le raccourci HUD existant fonctionne toujours dans Qubinter.',
       missingHelper:
-        'Il manque l’assistant du geste HUD dans cette installation de Hermes. Mettez à jour ou réinstallez Hermes, puis réessayez.',
+        'Il manque l’assistant du geste HUD dans cette installation de Qubinter. Mettez à jour ou réinstallez Qubinter, puis réessayez.',
       unsupportedSession:
         'Cette session de bureau ne prend pas en charge les appuis globaux sur les touches de modification. Linux nécessite X11 ; Wayland n’est pas pris en charge.'
     },
     screenshot: {
       enabledTitle: "Raccourci de capture d'écran",
       enabledDesc:
-        "Appuyez simultanément sur les deux touches Commande depuis n'importe quelle application pour capturer sa fenêtre au premier plan et la joindre au brouillon Hermes actuel. Rien n'est envoyé automatiquement. Désactivé par défaut et limité à ce Mac. Le contenu peut être sensible : vérifiez la pièce jointe avant l'envoi.",
+        "Appuyez simultanément sur les deux touches Commande depuis n'importe quelle application pour capturer sa fenêtre au premier plan et la joindre au brouillon Qubinter actuel. Rien n'est envoyé automatiquement. Désactivé par défaut et limité à ce Mac. Le contenu peut être sensible : vérifiez la pièce jointe avant l'envoi.",
       statusTitle: "État du raccourci de capture d'écran",
       checking: "Vérification du raccourci de capture d'écran…",
       disabled: "Le raccourci de capture d'écran est désactivé.",
       starting: "Démarrage de l'écouteur du raccourci ; il n'est pas encore prêt.",
       ready: "Le raccourci est prêt. Les captures d'écran sont jointes au brouillon actuel sans être envoyées.",
       inputPermission:
-        "L'autorisation Surveillance de l'entrée permet à Hermes de détecter les deux touches Commande lorsqu'une autre application est active. Autorisez Hermes dans Réglages Système → Confidentialité et sécurité → Surveillance de l'entrée, puis réessayez.",
+        "L'autorisation Surveillance de l'entrée permet à Qubinter de détecter les deux touches Commande lorsqu'une autre application est active. Autorisez Qubinter dans Réglages Système → Confidentialité et sécurité → Surveillance de l'entrée, puis réessayez.",
       screenPermission:
-        "L'autorisation Enregistrement de l'écran permet à Hermes de capturer la fenêtre au premier plan. Autorisez Hermes dans Réglages Système → Confidentialité et sécurité → Enregistrement de l'écran, puis réessayez. Redémarrez Hermes si macOS le demande.",
+        "L'autorisation Enregistrement de l'écran permet à Qubinter de capturer la fenêtre au premier plan. Autorisez Qubinter dans Réglages Système → Confidentialité et sécurité → Enregistrement de l'écran, puis réessayez. Redémarrez Qubinter si macOS le demande.",
       openSettings: 'Ouvrir les Réglages Système',
       retry: 'Réessayer',
       unavailable: "Le raccourci de capture d'écran est indisponible. Réessayez ou désactivez-le.",
@@ -1693,7 +1693,7 @@ export const frOverrides = {
     quickEntry: {
       enabledTitle: 'Saisie rapide',
       enabledDesc:
-        "Faites apparaître un petit compositeur depuis n'importe où avec un raccourci global et envoyez une invite sans ouvrir Hermes.",
+        "Faites apparaître un petit compositeur depuis n'importe où avec un raccourci global et envoyez une invite sans ouvrir Qubinter.",
       shortcutTitle: 'Raccourci de saisie rapide',
       shortcutDesc: 'Nécessite au moins un modificateur, par ex. CommandOrControl+Shift+Espace.',
       active: 'Le raccourci est actif.',
@@ -1723,7 +1723,7 @@ export const frOverrides = {
     connections: {
       title: 'Connexions',
       intro:
-        'Enregistrez tous les emplacements où vivent vos agents : cet appareil, les gateways distantes de votre réseau et les instances Hermes Cloud. Ils sont tous conservés ici.',
+        'Enregistrez tous les emplacements où vivent vos agents : cet appareil, les gateways distantes de votre réseau et les instances Qubinter Cloud. Ils sont tous conservés ici.',
       stagedNote:
         "Les conversations et la liste des agents suivent la source choisie ; le backend de fenêtre géré par l'application reste sélectionné dans Paramètres → Gateway.",
       launchModeTitle: 'Au démarrage, revenir aux sessions de la dernière gateway utilisée',
@@ -1750,15 +1750,15 @@ export const frOverrides = {
       updateAllRunning: 'Mise à jour de toutes les instances…',
       updateAllDone: 'Mises à jour envoyées',
       updateAllFailed: "L'envoi groupé des mises à jour a échoué",
-      updateSkippedCloud: 'Gérée par Hermes Cloud',
+      updateSkippedCloud: 'Gérée par Qubinter Cloud',
       kindLocal: 'Locale',
       kindRemote: 'Gateway distante',
-      kindCloud: 'Hermes Cloud',
+      kindCloud: 'Qubinter Cloud',
       kindSsh: 'SSH',
-      kindLocalDesc: "L'environnement Hermes géré par cette application.",
-      kindRemoteDesc: 'Une gateway Hermes accessible en HTTP(S), par le LAN, Tailscale ou Internet.',
-      kindCloudDesc: 'Une instance hébergée découverte via votre compte Hermes Cloud.',
-      kindSshDesc: 'Une installation Hermes accessible en SSH.',
+      kindLocalDesc: "L'environnement Qubinter géré par cette application.",
+      kindRemoteDesc: 'Une gateway Qubinter accessible en HTTP(S), par le LAN, Tailscale ou Internet.',
+      kindCloudDesc: 'Une instance hébergée découverte via votre compte Qubinter Cloud.',
+      kindSshDesc: 'Une installation Qubinter accessible en SSH.',
       labelTitle: 'Nom',
       labelDesc:
         'Obligatoire. Affiché partout où cette instance apparaît et nécessairement unique (par exemple « Homelab » ou « PC professionnel »).',
@@ -1767,7 +1767,7 @@ export const frOverrides = {
       sshHostTitle: 'Hôte SSH',
       headersTitle: 'En-têtes supplémentaires du gateway',
       headersDesc:
-        "Envoyés avec chaque requête HTTP et WebSocket vers ce gateway, notamment pour les proxys d'accès comme Cloudflare Access (CF-Access-Client-Id / CF-Access-Client-Secret). Les valeurs sont stockées chiffrées. Les en-têtes gérés par Hermes (Authorization, Cookie, Host…) sont ignorés.",
+        "Envoyés avec chaque requête HTTP et WebSocket vers ce gateway, notamment pour les proxys d'accès comme Cloudflare Access (CF-Access-Client-Id / CF-Access-Client-Secret). Les valeurs sont stockées chiffrées. Les en-têtes gérés par Qubinter (Authorization, Cookie, Host…) sont ignorés.",
       headerValuePlaceholder: 'Valeur',
       headerValueSaved: 'Enregistrée — laissez vide pour la conserver',
       headerAdd: 'Ajouter un en-tête',
@@ -1779,7 +1779,7 @@ export const frOverrides = {
       localAddHint:
         "La connexion locale est indisponible : la connexion gérée existe déjà (il ne peut y en avoir qu'une).",
       cloudAddHint:
-        "Astuce : connectez-vous à Hermes Cloud ci-dessus pour découvrir automatiquement vos agents — utilisez ce formulaire uniquement pour enregistrer manuellement l'URL d'une instance connue.",
+        "Astuce : connectez-vous à Qubinter Cloud ci-dessus pour découvrir automatiquement vos agents — utilisez ce formulaire uniquement pour enregistrer manuellement l'URL d'une instance connue.",
       save: 'Enregistrer la connexion',
       saving: 'Enregistrement…',
       cancel: 'Annuler',
@@ -1810,25 +1810,25 @@ export const frOverrides = {
       title: 'Connexion au gateway',
       envOverride: "remplacement par variable d'environnement",
       intro:
-        'Local par défaut. Utilisez distant quand cette application doit piloter un backend Hermes ailleurs. Remplacements par profil ci-dessous.',
+        'Local par défaut. Utilisez distant quand cette application doit piloter un backend Qubinter ailleurs. Remplacements par profil ci-dessous.',
       envOverrideTitle: "Des variables d'environnement contrôlent cette session desktop.",
       envOverrideDesc:
         'Supprimez les variables HERMES_DESKTOP_REMOTE_URL et HERMES_DESKTOP_REMOTE_TOKEN pour utiliser le paramètre enregistré ci-dessous.',
       modeTitle: 'Mode de connexion',
       localTitle: 'Gateway local',
       localDesc:
-        "Démarrer un backend Hermes privé sur localhost. C'est la valeur par défaut et cela fonctionne hors ligne.",
+        "Démarrer un backend Qubinter privé sur localhost. C'est la valeur par défaut et cela fonctionne hors ligne.",
       remoteTitle: 'Gateway distant',
-      remoteDesc: 'Connecter ce shell desktop à un backend Hermes distant.',
+      remoteDesc: 'Connecter ce shell desktop à un backend Qubinter distant.',
       remoteAuthHint:
         "Les gateways hébergés utilisent OAuth ou un nom d'utilisateur et un mot de passe ; les auto-hébergés peuvent utiliser un jeton de session.",
-      cloudTitle: 'Hermes Cloud',
+      cloudTitle: 'Qubinter Cloud',
       cloudDesc:
-        "Connectez-vous une fois à Hermes Cloud et choisissez parmi les agents de votre compte — pas d'URL à coller.",
-      cloudSignInTitle: 'Hermes Cloud',
-      cloudSignIn: 'Se connecter à Hermes Cloud',
-      cloudSignedIn: 'Connecté à Hermes Cloud',
-      cloudNeedsSignIn: 'Connectez-vous à Hermes Cloud pour découvrir les agents de votre compte.',
+        "Connectez-vous une fois à Qubinter Cloud et choisissez parmi les agents de votre compte — pas d'URL à coller.",
+      cloudSignInTitle: 'Qubinter Cloud',
+      cloudSignIn: 'Se connecter à Qubinter Cloud',
+      cloudSignedIn: 'Connecté à Qubinter Cloud',
+      cloudNeedsSignIn: 'Connectez-vous à Qubinter Cloud pour découvrir les agents de votre compte.',
       cloudSignedInDesc:
         'Vous êtes connecté. Choisissez un agent ci-dessous ; la session se rafraîchit automatiquement.',
       cloudAgentsTitle: 'Vos agents',
@@ -1850,11 +1850,11 @@ export const frOverrides = {
       cloudUseSaved: 'Utiliser le gateway',
       cloudActive: 'Actif dans cette fenêtre',
       cloudConnecting: 'Connexion…',
-      cloudDiscoverFailed: 'Impossible de charger vos agents Hermes Cloud',
+      cloudDiscoverFailed: 'Impossible de charger vos agents Qubinter Cloud',
       cloudConnectFailed: 'Impossible de se connecter à cet agent',
-      cloudSignInFailed: 'Échec de la connexion à Hermes Cloud',
-      cloudSignedOutTitle: 'Déconnecté de Hermes Cloud',
-      cloudSignedOutMessage: 'Session Hermes Cloud effacée.',
+      cloudSignInFailed: 'Échec de la connexion à Qubinter Cloud',
+      cloudSignedOutTitle: 'Déconnecté de Qubinter Cloud',
+      cloudSignedOutMessage: 'Session Qubinter Cloud effacée.',
       cloudConnectedTitle: 'Connecté',
       cloudConnectedPill: 'Connecté',
       cloudConnectedTo: name => `Connecté à ${name}.`,
@@ -1910,9 +1910,9 @@ export const frOverrides = {
       enterUrlFirst: "Saisissez d'abord une URL distante.",
       restartingTitle: 'Reconnexion du gateway',
       savedTitle: 'Paramètres du gateway enregistrés',
-      restartingMessage: 'Hermes Desktop va se reconnecter avec les paramètres enregistrés — le shell reste ouvert.',
+      restartingMessage: 'Qubinter Desktop va se reconnecter avec les paramètres enregistrés — le shell reste ouvert.',
       savedMessage: 'Enregistré pour le prochain redémarrage.',
-      connectedTo: (baseUrl, version) => `Connecté à ${baseUrl}${version ? ` · Hermes ${version}` : ''}`,
+      connectedTo: (baseUrl, version) => `Connecté à ${baseUrl}${version ? ` · Qubinter ${version}` : ''}`,
       reachableTitle: 'Gateway distant accessible',
       signedOutTitle: 'Déconnecté',
       signedOutMessage: 'Session du gateway distant effacée.',
@@ -1924,7 +1924,7 @@ export const frOverrides = {
       saveFailed: "Impossible d'enregistrer les paramètres du gateway",
       sshTitle: 'Se connecter via SSH',
       sshDesc:
-        "Hermes est lancé sur la machine distante via SSH et acheminé vers cette application — rien à démarrer ou exposer soi-même. Nécessite un accès SSH par clé fonctionnel vers l'hôte.",
+        "Qubinter est lancé sur la machine distante via SSH et acheminé vers cette application — rien à démarrer ou exposer soi-même. Nécessite un accès SSH par clé fonctionnel vers l'hôte.",
       sshTrustHint:
         "La première clé d'hôte présentée est approuvée et fixée ; les changements ultérieurs échouent en mode fermé.",
       sshHostTitle: 'Hôte',
@@ -1940,13 +1940,13 @@ export const frOverrides = {
       sshPortDesc: 'Vide = 22 ou le port de ~/.ssh/config.',
       sshKeyTitle: "Fichier d'identité",
       sshKeyDesc: 'Chemin de la clé privée. Vide = ssh-agent ou ~/.ssh/config.',
-      sshHermesPathTitle: 'Chemin Hermes (facultatif)',
+      sshHermesPathTitle: 'Chemin Qubinter (facultatif)',
       sshHermesPathDesc: 'Chemin complet vers le binaire hermes distant. Vide = détection automatique.',
       sshHermesPathPlaceholder: 'détection automatique',
       sshTestConnection: 'Tester SSH',
       sshConnect: 'Se connecter',
       sshButtonsHint: "Enregistrer s'applique au prochain lancement. Connecter se reconnecte immédiatement.",
-      sshReachable: (host, platform) => `Accessible : ${host} (${platform}) — Hermes trouvé`,
+      sshReachable: (host, platform) => `Accessible : ${host} (${platform}) — Qubinter trouvé`,
       sshIncompleteHost: 'Saisissez un hôte SSH avant de vous connecter.',
       sshErrUnreachable: "Impossible d'atteindre cet hôte via SSH. Vérifiez l'hôte, le port et votre réseau.",
       sshErrAuth:
@@ -1954,9 +1954,9 @@ export const frOverrides = {
       sshErrHostKey:
         "La clé de l'hôte a changé depuis votre dernière connexion. Vérifiez que ce changement est attendu, puis exécutez ssh-keygen -R <host> et reconnectez-vous.",
       sshErrNotInstalled:
-        "Hermes n'est pas installé sur l'hôte distant. Installez-le là-bas (curl -fsSL https://hermes-agent.nousresearch.com/install.sh | sh) ou définissez le chemin Hermes.",
+        "Hermes n'est pas installé sur l'hôte distant. Installez-le là-bas (curl -fsSL https://raw.githubusercontent.com/hydev-a/qubinter-agent/main/scripts/install.sh | sh) ou définissez le chemin Hermes.",
       sshErrPlatform:
-        'Plateforme distante non prise en charge. Le mode SSH de Hermes Desktop supporte les hôtes distants Linux, macOS et Windows.',
+        'Plateforme distante non prise en charge. Le mode SSH de Qubinter Desktop supporte les hôtes distants Linux, macOS et Windows.',
       sshErrTimeout: "Expiration de la connexion SSH. L'hôte peut être inaccessible ou en veille.",
       sshErrUpdateRequired: "Mettez à jour Hermes sur l'hôte distant avant de vous connecter avec Desktop SSH.",
       sshErrUnknown: 'Échec de la connexion SSH.'
@@ -2005,7 +2005,7 @@ export const frOverrides = {
       noOutput: 'Aucune sortie pour le moment.',
       deepLinkTitle: 'Ajouter un serveur MCP ?',
       deepLinkDescription:
-        "Un lien demande d'ajouter ce serveur MCP à Hermes. Vérifiez attentivement la configuration ci-dessous : elle provient du lien, pas de Hermes.",
+        "Un lien demande d'ajouter ce serveur MCP à Qubinter. Vérifiez attentivement la configuration ci-dessous : elle provient du lien, pas de Qubinter.",
       deepLinkStdioWarning:
         'Ce serveur exécute sur votre machine un processus local avec la commande affichée ci-dessous. Continuez uniquement si vous faites confiance à sa source.',
       deepLinkConfirm: 'Ajouter le serveur',
@@ -2129,7 +2129,7 @@ export const frOverrides = {
       serverRunning: 'En cours',
       runtimeInstalled: 'Moteur llama.cpp installé',
       runtimeInstalledDetail: (tag, backend) =>
-        `Build ${tag}, backend ${backend}. Hermes démarre et gère le serveur pour vous.`,
+        `Build ${tag}, backend ${backend}. Qubinter démarre et gère le serveur pour vous.`,
       installTitle: 'Installer le moteur local',
       installDetail:
         "Télécharge le moteur d'inférence llama.cpp (quelques centaines de Mo). Les modèles téléchargés s'exécutent entièrement sur cette machine : aucun compte requis et aucune donnée ne quitte votre ordinateur.",
@@ -2182,7 +2182,7 @@ export const frOverrides = {
       updating: 'Mise à jour du moteur…',
       upToDateTitle: 'Moteur à jour',
       upToDateDetail: (tag, backend) =>
-        `llama.cpp ${tag} (${backend}) est en cours d'exécution : il s'agit de la dernière build fournie par Hermes.`,
+        `llama.cpp ${tag} (${backend}) est en cours d'exécution : il s'agit de la dernière build fournie par Qubinter.`,
       activeDetail:
         "Les nouvelles conversations utilisent ce modèle. Il se charge lors de l'envoi de votre premier message.",
       activeNotLoaded: 'Se charge avec votre premier message',
@@ -2462,7 +2462,7 @@ export const frOverrides = {
         cliBillingDisabled: {
           title: 'Les dépenses à distance sont désactivées',
           message:
-            'Les dépenses à distance sont désactivées pour ce compte — un administrateur de facturation peut les activer depuis la page Hermes Agent du portail.'
+            'Les dépenses à distance sont désactivées pour ce compte — un administrateur de facturation peut les activer depuis la page Qubinter Agent du portail.'
         },
         roleRequired: {
           title: 'Rôle administrateur requis',
@@ -2530,7 +2530,7 @@ export const frOverrides = {
       connectAccount: 'Connecter un compte',
       haveApiKey: 'Vous avez une clé API ?',
       intro:
-        "Connectez-vous avec un abonnement — pas de clé API à copier. Hermes lance la connexion navigateur pour vous, directement dans l'application.",
+        "Connectez-vous avec un abonnement — pas de clé API à copier. Qubinter lance la connexion navigateur pour vous, directement dans l'application.",
       connected: 'Connecté',
       collapse: 'Réduire',
       connectAnother: 'Connecter un autre fournisseur',
@@ -2552,7 +2552,7 @@ export const frOverrides = {
       localEndpoint: {
         title: 'Point de terminaison local / personnalisé',
         description:
-          "Pointez Hermes vers n'importe quel point de terminaison compatible OpenAI (Zyphra, vLLM, llama.cpp, Ollama, etc)."
+          "Pointez Qubinter vers n'importe quel point de terminaison compatible OpenAI (Zyphra, vLLM, llama.cpp, Ollama, etc)."
       },
       loading: 'Chargement des fournisseurs...'
     },
@@ -2682,7 +2682,7 @@ export const frOverrides = {
         needsSetupConfirmAction: 'Sélectionner quand même',
         unavailableTitle: 'Commandes de terminal indisponibles',
         unavailableMessage: backend =>
-          `Hermes ne peut pas exécuter de commandes shell pour le moment : ${backend} n'est pas prêt. Passez en Local ou terminez la configuration de ${backend}, puis réessayez.`,
+          `Qubinter ne peut pas exécuter de commandes shell pour le moment : ${backend} n'est pas prêt. Passez en Local ou terminez la configuration de ${backend}, puis réessayez.`,
         openBackendSettings: 'Ouvrir les paramètres du terminal',
         useLocal: 'Utiliser Local',
         switchedToLocal:
@@ -2700,7 +2700,7 @@ export const frOverrides = {
         failedSave: "Impossible d'enregistrer le paramètre du profil réel",
         prompt: {
           title: 'Restez connecté à vos sites',
-          body: "Autorisez Hermes à naviguer avec un instantané de votre profil de navigateur par défaut afin que les sites s'ouvrent avec vos sessions déjà connectées.",
+          body: "Autorisez Qubinter à naviguer avec un instantané de votre profil de navigateur par défaut afin que les sites s'ouvrent avec vos sessions déjà connectées.",
           bulletSnapshot: 'Les cookies et identifiants de connexion sont copiés dans un instantané géré.',
           bulletLiveProfile: "Votre profil de navigateur actif n'est jamais ouvert directement.",
           bulletLocal: 'Rien ne quitte cet ordinateur.',
@@ -2777,7 +2777,7 @@ export const frOverrides = {
       halfDesktopHint: 'cette application, identique pour tous les profils',
       halfAgent: 'Agent',
       halfAgentIn: profile => `Agent dans ${profile}`,
-      defaultProfile: 'Hermes (par défaut)',
+      defaultProfile: 'Qubinter (par défaut)',
       kindAgent: 'Agent',
       kindDesktop: 'Desktop',
       kindBoth: 'Agent + Desktop',
@@ -2797,7 +2797,7 @@ export const frOverrides = {
       emptyHint: 'Parcourez le catalogue ci-dessous pour installer un plugin vérifié en un clic.',
       loadFailed: "Impossible de charger les plugins de l'agent",
       toggleFailed: name => `Impossible de modifier l'état de ${name}`,
-      legacyBackend: 'Ce backend est trop ancien pour gérer les plugins depuis cet écran ; mettez Hermes à jour.',
+      legacyBackend: 'Ce backend est trop ancien pour gérer les plugins depuis cet écran ; mettez Qubinter à jour.',
       portableBadge: 'portable',
       serverStates: {
         connected: 'connecté',
@@ -2815,7 +2815,7 @@ export const frOverrides = {
         'Utilisez « + Ajouter à cet agent » sur un plugin : les entrées vérifiées sont installées depuis leur commit épinglé dans le profil sélectionné.',
       alreadyInstalled: (name: string) => `${name} est déjà installé dans ce profil.`,
       catalogProvenance: (sha: string) =>
-        `Installé depuis le catalogue Hermes${sha ? ` au commit épinglé ${sha}` : ''}.`,
+        `Installé depuis le catalogue Qubinter${sha ? ` au commit épinglé ${sha}` : ''}.`,
       pinnedProvenance: (sha: string) =>
         `Épinglé au commit ${sha}. Les mises à jour sont refusées tant qu’il n’est pas réinstallé avec un nouvel épinglage.`,
       pinnedBadge: (sha: string) => `épinglé @ ${sha}`,
@@ -2843,9 +2843,9 @@ export const frOverrides = {
       deepLinkErrorTitle: 'Lien d’installation de plugin refusé',
       deepLinkCatalogInvalidName: 'Le nom de catalogue du lien est manquant ou invalide.',
       deepLinkCatalogUnknown: (name: string) =>
-        `\u00AB\u00A0${name}\u00A0\u00BB ne figure pas dans le catalogue de plugins Hermes. Rien n’a été installé.`,
+        `\u00AB\u00A0${name}\u00A0\u00BB ne figure pas dans le catalogue de plugins Qubinter. Rien n’a été installé.`,
       deepLinkCatalogUnavailable:
-        'Impossible de charger le catalogue de plugins Hermes. Vérifiez votre connexion et rouvrez le lien.',
+        'Impossible de charger le catalogue de plugins Qubinter. Vérifiez votre connexion et rouvrez le lien.',
       settingsToggle: (name: string) => `Paramètres : ${name}`,
       settingsForm: {
         save: 'Enregistrer les paramètres',
@@ -2933,7 +2933,7 @@ export const frOverrides = {
     loading: 'Chargement…',
     emptyTitle: "Rien d'appris pour le moment",
     emptyDesc:
-      'Au fur et à mesure que Hermes construit des skills et des mémoires pour votre travail, ils apparaissent ici.',
+      'Au fur et à mesure que Qubinter construit des skills et des mémoires pour votre travail, ils apparaissent ici.',
     share: 'Partager la carte',
     shareHint:
       'Copiez le code pour partager cette carte, ou collez-en un pour le charger. Il inclut uniquement la disposition, pas votre texte de mémoire ou de skill.',
@@ -3013,7 +3013,7 @@ export const frOverrides = {
       placeholder: 'Rechercher des animaux…',
       loading: 'Chargement de la galerie petdex…',
       error: "Impossible d'atteindre la galerie petdex…",
-      staleBackend: 'Redémarrez Hermes pour utiliser les animaux — le backend précède cette fonctionnalité.',
+      staleBackend: 'Redémarrez Qubinter pour utiliser les animaux — le backend précède cette fonctionnalité.',
       empty: 'Aucun animal correspondant.',
       turnOff: 'Éteindre',
       turnOn: 'Allumer',
@@ -3040,8 +3040,8 @@ export const frOverrides = {
       hatchComposing: 'Assemblage…',
       hatchSaving: 'Presque terminé…',
       namePlaceholder: 'Nommez votre animal',
-      staleBackend: 'Mettez à jour Hermes pour générer des animaux…',
-      backgroundHint: "Vous pouvez fermer — Hermes vous notifiera quand c'est terminé.",
+      staleBackend: 'Mettez à jour Qubinter pour générer des animaux…',
+      backgroundHint: "Vous pouvez fermer — Qubinter vous notifiera quand c'est terminé.",
       slowProviderHint: 'Cela peut prendre plusieurs minutes',
       remix: 'Remixer',
       remixConfirmTitle: 'Remixer cette apparence ?',
@@ -3087,7 +3087,7 @@ export const frOverrides = {
       },
       settings: {
         title: 'Paramètres',
-        detail: 'Configurer Hermes Desktop'
+        detail: 'Configurer Qubinter Desktop'
       },
       capabilities: {
         title: 'Capacités',
@@ -3128,7 +3128,7 @@ export const frOverrides = {
     noSessions: 'Aucune session pour le moment.',
     gatewayRunning: 'Gateway de messagerie en cours',
     gatewayStopped: 'Gateway de messagerie arrêté',
-    hermesActiveSessions: (version, count) => `Hermes ${version} · Sessions actives ${count}`,
+    hermesActiveSessions: (version, count) => `Qubinter ${version} · Sessions actives ${count}`,
     restartGateway: 'Redémarrer le gateway',
     openBrowser: 'Ouvrir le navigateur',
     gatewayRestartFailed: 'Échec du redémarrage du gateway.',
@@ -3136,7 +3136,7 @@ export const frOverrides = {
     sharedGatewayRestartDescription: bots => `Tous les bots de cet appareil se reconnecteront : ${bots}`,
     sharedGatewayRestartConfirm: 'Tout redémarrer',
     sharedGatewayRestarted: count => `Gateway partagé redémarré (${count} ${count === 1 ? 'bot' : 'bots'})`,
-    updateHermes: 'Mettre à jour Hermes',
+    updateHermes: 'Mettre à jour Qubinter',
     reloadWindow: 'Recharger la fenêtre',
     actionRunning: 'en cours',
     actionDone: 'terminé',
@@ -3294,11 +3294,11 @@ export const frOverrides = {
     telegramQr: {
       title: 'Choisissez comment connecter votre bot Telegram',
       subtitle:
-        "Les deux méthodes connectent un bot que vous contrôlez et enregistrent ses identifiants uniquement dans cette installation d'Hermes.",
+        "Les deux méthodes connectent un bot que vous contrôlez et enregistrent ses identifiants uniquement dans cette installation d'Qubinter.",
       quickSetup: 'Configuration rapide',
       recommended: 'Recommandé',
       quickHelp:
-        "Scannez un code QR et confirmez dans Telegram. Hermes crée le bot et détecte automatiquement votre identifiant d'utilisateur Telegram.",
+        "Scannez un code QR et confirmez dans Telegram. Qubinter crée le bot et détecte automatiquement votre identifiant d'utilisateur Telegram.",
       createWithQr: 'Créer avec un code QR',
       starting: 'Démarrage…',
       replaceWarning:
@@ -3533,7 +3533,7 @@ export const frOverrides = {
     switchToConnection: name => `Basculer vers ${name}`,
     switchConnectionFailed: name => `Impossible de se connecter à ${name}`,
     manageProfiles: 'Gérer les profils…',
-    connectGateway: 'Connecter un autre gateway Hermes…',
+    connectGateway: 'Connecter un autre gateway Qubinter…',
     fleet: {
       allOnGateway: 'Tous les profils de cette gateway',
       gateway: gateway => `Profils sur ${gateway}`,
@@ -3541,14 +3541,14 @@ export const frOverrides = {
       onGateway: (name, gateway) => `${name} · ${gateway}`,
       switchTo: (name, gateway) => `Basculer vers ${name} sur ${gateway}`,
       deleteOn: gateway => ` sur ${gateway}`,
-      localDevice: 'Cet appareil (backend local — installe Hermes s’il manque, sinon ouvre une nouvelle session)',
+      localDevice: 'Cet appareil (backend local — installe Qubinter s’il manque, sinon ouvre une nouvelle session)',
       switchDeviceTitle: 'Basculer vers cet appareil ?',
       switchDeviceDesc:
         'Cela ouvre une nouvelle session sur cet ordinateur. La conversation en cours reste sur l’autre gateway.',
       switchDeviceConfirm: 'Basculer',
       installDeviceTitle: 'Basculer vers cet appareil ?',
       installDeviceDesc:
-        'Hermes sera installé localement, puis une nouvelle session s’ouvrira sur cet ordinateur. Rien n’est installé tant que vous ne confirmez pas.',
+        'Qubinter sera installé localement, puis une nouvelle session s’ouvrira sur cet ordinateur. Rien n’est installé tant que vous ne confirmez pas.',
       installDeviceConfirm: 'Installer localement',
       connectExistingInstead: 'Connecter un existant à la place'
     },
@@ -3599,7 +3599,7 @@ export const frOverrides = {
     defaultProfile: 'Profil par défaut',
     defaultSet: name => `${name} est maintenant le profil par défaut`,
     defaultDescription:
-      "Utilisé à l'ouverture de Hermes et pour les nouvelles conversations. Les sessions existantes restent dans leur profil.",
+      "Utilisé à l'ouverture de Qubinter et pour les nouvelles conversations. Les sessions existantes restent dans leur profil.",
     failedSetDefault: 'Impossible de définir le profil par défaut',
     setColor: color => `Définir la couleur ${color}`,
     autoColor: 'Auto',
@@ -3636,7 +3636,7 @@ export const frOverrides = {
     deleteDescMid: ' et supprimera son ',
     deleteDescSuffix: ' répertoire. Cela ne peut pas être annulé.',
     deleting: 'Suppression...',
-    createDesc: 'Les profils sont des environnements Hermes indépendants : configuration, skills et SOUL.md séparés.',
+    createDesc: 'Les profils sont des environnements Qubinter indépendants : configuration, skills et SOUL.md séparés.',
     nameLabel: 'Nom',
     cloneFrom: 'Cloner depuis',
     cloneFromNone: 'Aucun (vide)',
@@ -3670,7 +3670,7 @@ export const frOverrides = {
     failedRename: 'Échec du renommage du profil'
   },
   modelAssignment: {
-    saveFailed: 'Hermes n’a pas enregistré ce changement de modèle.',
+    saveFailed: 'Qubinter n’a pas enregistré ce changement de modèle.',
     confirmTitle: 'Avertissement sur le choix du modèle',
     confirmDetail: 'Confirmez uniquement si vous acceptez ce compromis.',
     confirmAction: 'Confirmer',
@@ -3739,7 +3739,7 @@ export const frOverrides = {
     everyHourAt: minute => `Toutes les heures à :${minute}`,
     newCron: 'Nouveau cron',
     emptyDescNew:
-      "Planifiez une invite à exécuter selon une expression cron. Hermes l'exécutera et livrera les résultats vers la destination de votre choix.",
+      "Planifiez une invite à exécuter selon une expression cron. Qubinter l'exécutera et livrera les résultats vers la destination de votre choix.",
     emptyDescSearch: 'Essayez une requête de recherche plus large.',
     emptyTitleNew: 'Aucune tâche planifiée pour le moment',
     emptyTitleSearch: 'Aucune correspondance',
@@ -3952,8 +3952,8 @@ export const frOverrides = {
     storageCorrupt: {
       title: 'La base de données des sessions est endommagée',
       body: (profiles: string) =>
-        `Hermes ne peut pas lire tout l’historique des sessions de ${profiles}. Les conversations absentes de cette liste n’ont pas été supprimées ; le fichier qui les contient est endommagé.`,
-      action: 'Quittez Hermes sur ce profil, puis inspectez le fichier sans le modifier, ou restaurez un instantané :',
+        `Qubinter ne peut pas lire tout l’historique des sessions de ${profiles}. Les conversations absentes de cette liste n’ont pas été supprimées ; le fichier qui les contient est endommagé.`,
+      action: 'Quittez Qubinter sur ce profil, puis inspectez le fichier sans le modifier, ou restaurez un instantané :',
       guide: 'Guide de récupération'
     },
     noFilterMatches: 'Aucune session ne correspond à ces filtres',
@@ -3996,9 +3996,9 @@ export const frOverrides = {
       removeFromSidebar: 'Masquer de la barre latérale',
       createFailed: 'Impossible de créer le projet',
       staleBackend:
-        'Mettez à jour le backend Hermes pour créer des projets — votre backend est plus ancien que cette application de bureau (Paramètres → Mises à jour → Backend).',
+        'Mettez à jour le backend Qubinter pour créer des projets — votre backend est plus ancien que cette application de bureau (Paramètres → Mises à jour → Backend).',
       deleteConfirm:
-        'Cela supprime le projet enregistré de Hermes. Les fichiers, dépôts git et worktrees restent inchangés.',
+        'Cela supprime le projet enregistré de Qubinter. Les fichiers, dépôts git et worktrees restent inchangés.',
       startWork: 'Nouveau worktree',
       newWorktreeTitle: 'Nouveau worktree',
       newWorktreeDesc: 'Nommez la branche pour ce worktree.',
@@ -4008,7 +4008,7 @@ export const frOverrides = {
       baseBranchNone: 'Aucune branche trouvée',
       startWorkFailed: 'Impossible de créer le worktree',
       worktreeStaleBackend:
-        'Mettez à jour le backend Hermes pour créer des worktrees depuis Desktop — votre backend est plus ancien que cette application (Paramètres → Mises à jour → Backend).',
+        'Mettez à jour le backend Qubinter pour créer des worktrees depuis Desktop — votre backend est plus ancien que cette application (Paramètres → Mises à jour → Backend).',
       worktreeProjectLabel: 'Projet',
       worktreeProjectPlaceholder: 'Rechercher des projets…',
       worktreeProjectNone: 'Aucun projet avec un dossier',
@@ -4103,12 +4103,12 @@ export const frOverrides = {
   composer: {
     message: 'Message',
     wakingProfile: profile => `Réveil de ${profile}…`,
-    placeholderStarting: 'Démarrage de Hermes…',
-    placeholderReconnecting: 'Reconnexion à Hermes…',
+    placeholderStarting: 'Démarrage de Qubinter…',
+    placeholderReconnecting: 'Reconnexion à Qubinter…',
     placeholderFollowUp: 'Envoyer un suivi',
     newSessionPlaceholders: [
       'Sur quoi travaillons-nous ?',
-      'Donnez une tâche à Hermes',
+      'Donnez une tâche à Qubinter',
       "Qu'avez-vous en tête ?",
       'Décrivez ce dont vous avez besoin',
       "Qu'est-ce qu'on attaque ?",
@@ -4145,8 +4145,8 @@ export const frOverrides = {
     transcribingDictation: 'Transcription de la dictée',
     voiceControls: 'Voix',
     voiceEngine: 'Moteur de conversation vocale',
-    voiceEngineChained: 'Reconnaissance vocale + voix Hermes',
-    voiceEngineLive: 'GPT-Live (duplex intégral, délègue à Hermes)',
+    voiceEngineChained: 'Reconnaissance vocale + voix Qubinter',
+    voiceEngineLive: 'GPT-Live (duplex intégral, délègue à Qubinter)',
     voiceEngineLiveNeedsKey: 'Nécessite une clé API OpenAI',
     voiceEngineChangeFailed: 'Impossible de changer le moteur de conversation vocale',
     voiceEngineChainedShort: 'reconnaissance vocale',
@@ -4171,7 +4171,7 @@ export const frOverrides = {
       '/resume': 'Reprendre une session enregistrée',
       '/details': 'contrôler le niveau de détail de la transcription',
       '/copy': "copier la sélection ou le dernier message de l'assistant",
-      '/quit': 'quitter Hermes',
+      '/quit': 'quitter Qubinter',
       '/start': 'Accuser réception des pings de démarrage de la plateforme sans répondre',
       '/new': 'Démarrer une nouvelle conversation',
       '/topic': 'Activer ou inspecter les sessions par sujet des MP Telegram',
@@ -4198,7 +4198,7 @@ export const frOverrides = {
         'Mettre un prompt en file pour le prochain tour, ou lister/modifier/supprimer/déplacer/vider les prompts en file',
       '/steer': 'Injecter un message après le prochain appel d’outil sans interrompre',
       '/goal':
-        'Définir un objectif permanent sur lequel Hermes travaille au fil des tours jusqu’à ce qu’il soit atteint',
+        'Définir un objectif permanent sur lequel Qubinter travaille au fil des tours jusqu’à ce qu’il soit atteint',
       '/heartbeat': 'Définir un prompt récurrent qui revient dans cette session lorsqu’elle est inactive',
       '/refine': 'Passer en revue cette conversation maintenant et enregistrer les leçons en mémoire/skills',
       '/review': 'Lancer un sous-agent indépendant pour relire le travail qui vient d’être discuté (PR, code, docs)',
@@ -4211,7 +4211,7 @@ export const frOverrides = {
       '/context':
         'Afficher la vue détaillée de la fenêtre de contexte avec jauge d’utilisation, répartition par catégorie, statistiques de compression et débit',
       '/whoami': 'Afficher votre accès aux commandes slash (admin / utilisateur)',
-      '/profile': 'Changer de profil Hermes actif',
+      '/profile': 'Changer de profil Qubinter actif',
       '/codex-runtime': 'Activer/désactiver le runtime codex app-server pour les modèles OpenAI/Codex',
       '/personality': 'Définir une personnalité prédéfinie',
       '/battery': 'Afficher/masquer un indicateur de batterie coloré dans la barre d’état',
@@ -4240,7 +4240,7 @@ export const frOverrides = {
       '/subscription': 'Voir votre forfait Nous et le modifier dans le navigateur',
       '/topup': 'Afficher votre solde Nous et gérer la facturation sur le portail',
       '/platform': 'Suspendre, reprendre ou lister une plateforme de gateway en échec',
-      '/version': 'Afficher la version de Hermes Agent',
+      '/version': 'Afficher la version de Qubinter Agent',
       '/debug': 'Téléverser un rapport de débogage (infos système + journaux) et obtenir des liens partageables',
       '/model': 'Changer le modèle de cette session'
     },
@@ -4504,7 +4504,7 @@ export const frOverrides = {
       createPr: 'Créer une PR',
       openPr: 'Ouvrir une PR',
       ghMissing: 'Installez la CLI GitHub (gh) et connectez-vous pour ouvrir des PR',
-      agentShip: "Demander à Hermes d'ouvrir une PR",
+      agentShip: "Demander à Qubinter d'ouvrir une PR",
       agentShipUnavailable: "La conversation à l'origine de ces modifications n'est pas affichée.",
       agentShipPrompt:
         'Passez en revue les modifications actuelles, validez-les avec un message de validation conventionnel clair, poussez la branche, puis ouvrez une pull request.',
@@ -4516,23 +4516,23 @@ export const frOverrides = {
     }
   },
   updates: {
-    discontinuedTitle: "Cette version de Hermes n'est plus prise en charge",
+    discontinuedTitle: "Cette version de Qubinter n'est plus prise en charge",
     discontinuedBody:
-      "Cette version de Hermes n'est plus prise en charge et risque de ne plus fonctionner — désinstallez-la. Vos données restent sur le disque.",
+      "Cette version de Qubinter n'est plus prise en charge et risque de ne plus fonctionner — désinstallez-la. Vos données restent sur le disque.",
     channels: { stable: 'Stable', canary: 'Canary' },
-    appName: 'Hermes',
+    appName: 'Qubinter',
     availableBodyRelease: tag => `La version ${tag} est prête à être installée.`,
     releaseAvailable: tag => `La version ${tag} est disponible.`,
     checkingShort: 'Vérification…',
     availableBodyAppInstaller:
-      'Une nouvelle version de Hermes est prête. Hermes va se fermer, Windows terminera la mise à jour, puis Hermes rouvrira automatiquement.',
+      'Une nouvelle version de Qubinter est prête. Qubinter va se fermer, Windows terminera la mise à jour, puis Qubinter rouvrira automatiquement.',
     applyingBodyAppInstaller:
-      "Hermes va se fermer et Windows terminera la mise à jour. Hermes rouvrira ensuite automatiquement — vous n'avez rien à faire.",
+      "Qubinter va se fermer et Windows terminera la mise à jour. Qubinter rouvrira ensuite automatiquement — vous n'avez rien à faire.",
     applyingCloseAppInstaller:
-      'Cette fenêtre va se fermer, Windows terminera la mise à jour et Hermes rouvrira automatiquement.',
+      'Cette fenêtre va se fermer, Windows terminera la mise à jour et Qubinter rouvrira automatiquement.',
     checkUnknownTitleAppInstaller: 'Impossible de vérifier les mises à jour',
     checkUnknownBodyAppInstaller:
-      "Windows n'a pas pu rechercher les mises à jour. Elles s'installent également automatiquement au redémarrage de Hermes.",
+      "Windows n'a pas pu rechercher les mises à jour. Elles s'installent également automatiquement au redémarrage de Qubinter.",
     versionDetailsTitle: 'Détails de la version',
     versionDetailsBody:
       "Cette installation est gérée hors de l'application. Mettez-la à jour de la même manière que vous l'avez installée.",
@@ -4557,12 +4557,12 @@ export const frOverrides = {
     versionUnavailable: 'Version indisponible',
     bundleOutOfSync: "Version de l'application obsolète",
     bundleOutOfSyncDesc:
-      "Le runtime Hermes a été mis à jour, mais l'application Desktop utilise encore une ancienne version. Les nouvelles fonctions de l'interface, comme le mode Bot, resteront absentes jusqu'à sa mise à jour. Lancez la mise à jour ci-dessous pour reconstruire l'application. Si cet avertissement persiste, réinstallez-la avec le dernier installateur Desktop.",
+      "Le runtime Qubinter a été mis à jour, mais l'application Desktop utilise encore une ancienne version. Les nouvelles fonctions de l'interface, comme le mode Bot, resteront absentes jusqu'à sa mise à jour. Lancez la mise à jour ci-dessous pour reconstruire l'application. Si cet avertissement persiste, réinstallez-la avec le dernier installateur Desktop.",
     bundleOutOfSyncAction: "Obtenir l'installateur",
     bundleSwapPending: 'Redémarrez pour terminer la mise à jour',
     bundleSwapPendingDesc:
-      "L'application mise à jour est déjà installée — Hermes doit seulement redémarrer pour la charger. Vos conversations et paramètres sont préservés.",
-    bundleSwapPendingAction: 'Redémarrer Hermes',
+      "L'application mise à jour est déjà installée — Qubinter doit seulement redémarrer pour la charger. Vos conversations et paramètres sont préservés.",
+    bundleSwapPendingAction: 'Redémarrer Qubinter',
     checkNow: 'Vérifier maintenant',
     seeWhatsNew: 'Voir les nouveautés',
     releaseNotes: 'Notes de version',
@@ -4585,9 +4585,9 @@ export const frOverrides = {
       fetch: 'Téléchargement…',
       pull: 'Presque prêt…',
       pydeps: 'Finalisation…',
-      update: 'Mise à jour de Hermes…',
+      update: 'Mise à jour de Qubinter…',
       rebuild: "Reconstruction de l'application de bureau…",
-      restart: 'Redémarrage de Hermes…',
+      restart: 'Redémarrage de Qubinter…',
       done: 'Mise à jour terminée',
       manual: 'Mise à jour depuis votre terminal',
       guiSkew: "Mettre à jour l'application de bureau",
@@ -4597,18 +4597,18 @@ export const frOverrides = {
     checkFailedTitle: 'Impossible de vérifier les mises à jour',
     tryAgain: 'Réessayer',
     notAvailableTitle: 'Mise à jour indisponible',
-    unsupportedMessage: "Cette version de Hermes ne peut pas se mettre à jour depuis l'application.",
+    unsupportedMessage: "Cette version de Qubinter ne peut pas se mettre à jour depuis l'application.",
     connectionRetry: 'Vérifiez votre connexion et réessayez.',
-    gitUnusable: 'Hermes n’a pas pu exécuter Git sur cet ordinateur et n’a donc pas pu rechercher de mises à jour.',
+    gitUnusable: 'Qubinter n’a pas pu exécuter Git sur cet ordinateur et n’a donc pas pu rechercher de mises à jour.',
     connectionSettings: 'Paramètres de connexion',
     openDownloadPage: 'Ouvrir la page de téléchargement',
     latestBody: 'Vous utilisez la dernière version.',
     latestBodyBackend: 'Le backend utilise la dernière version.',
     allSetTitle: 'Tout est prêt',
     availableTitle: 'Nouvelle mise à jour disponible',
-    availableBody: 'Une nouvelle version de Hermes est prête à être installée.',
+    availableBody: 'Une nouvelle version de Qubinter est prête à être installée.',
     availableTitleBackend: 'Mise à jour du backend disponible',
-    availableBodyBackend: 'Une version plus récente du backend Hermes connecté est prête à être installée.',
+    availableBodyBackend: 'Une version plus récente du backend Qubinter connecté est prête à être installée.',
     availableBodyNoChangelog:
       "Une version plus récente est prête. Les notes de version ne sont pas disponibles pour ce type d'installation.",
     updateNow: 'Mettre à jour maintenant',
@@ -4618,32 +4618,32 @@ export const frOverrides = {
     manualTitle: 'Mise à jour depuis votre terminal',
     manualUnavailableTitle: 'Mise à jour impossible ici',
     manualBody:
-      "Vous avez installé Hermes depuis la ligne de commande, les mises à jour s'y effectuent donc aussi. Collez ceci dans votre terminal :",
-    manualPickedUp: 'Hermes prendra en compte la nouvelle version au prochain lancement.',
+      "Vous avez installé Qubinter depuis la ligne de commande, les mises à jour s'y effectuent donc aussi. Collez ceci dans votre terminal :",
+    manualPickedUp: 'Qubinter prendra en compte la nouvelle version au prochain lancement.',
     manualBodyBackend:
-      'Le backend Hermes est géré en dehors de cette app. Exécutez ceci sur le serveur qui l’héberge :',
+      'Le backend Qubinter est géré en dehors de cette app. Exécutez ceci sur le serveur qui l’héberge :',
     manualPickedUpBackend: 'Le backend chargera la nouvelle version une fois la mise à jour terminée.',
     guiSkewTitle: "Mettre à jour l'application de bureau",
     guiSkewBody:
-      "Le backend a été mis à jour, mais ce package d'application de bureau ne l'a pas été. Mettez à jour ou réinstallez l'application de bureau Hermes (votre AppImage / .deb / .rpm) pour qu'elle corresponde.",
+      "Le backend a été mis à jour, mais ce package d'application de bureau ne l'a pas été. Mettez à jour ou réinstallez l'application de bureau Qubinter (votre AppImage / .deb / .rpm) pour qu'elle corresponde.",
     copy: 'Copier',
     copied: 'Copié',
     done: 'Terminé',
     applyingBody:
-      'Le programme de mise à jour de Hermes prend le relais dans sa propre fenêtre et rouvre Hermes automatiquement une fois terminé. Ne rouvrez pas Hermes vous-même pendant la mise à jour.',
+      'Le programme de mise à jour de Qubinter prend le relais dans sa propre fenêtre et rouvre Qubinter automatiquement une fois terminé. Ne rouvrez pas Qubinter vous-même pendant la mise à jour.',
     applyingBodyBackend:
-      'Le backend distant applique la mise à jour et va redémarrer. Hermes se reconnecte automatiquement à son retour.',
-    applyingClose: 'Cette fenêtre se fermera pendant la mise à jour, puis Hermes se rouvre seul.',
+      'Le backend distant applique la mise à jour et va redémarrer. Qubinter se reconnecte automatiquement à son retour.',
+    applyingClose: 'Cette fenêtre se fermera pendant la mise à jour, puis Qubinter se rouvre seul.',
     errorTitle: 'Mise à jour non terminée',
     errorBody: "Pas de souci — rien n'a été perdu. Vous pouvez réessayer maintenant.",
-    blockerTitle: 'Fermer les aperçus locaux pour mettre à jour Hermes ?',
+    blockerTitle: 'Fermer les aperçus locaux pour mettre à jour Qubinter ?',
     blockerBody:
-      'Hermes doit arrêter ces aperçus locaux avant la mise à jour. Aucun de vos fichiers ne sera modifié ni supprimé.',
-    foreignBlockerTitle: 'Fermez les autres processus pour mettre à jour Hermes',
+      'Qubinter doit arrêter ces aperçus locaux avant la mise à jour. Aucun de vos fichiers ne sera modifié ni supprimé.',
+    foreignBlockerTitle: 'Fermez les autres processus pour mettre à jour Qubinter',
     foreignBlockerBody:
-      "Hermes ne peut pas fermer automatiquement ces processus en toute sécurité. Fermez l'application, le terminal ou le service qui possède chacun d'eux, puis relancez la mise à jour.",
+      "Qubinter ne peut pas fermer automatiquement ces processus en toute sécurité. Fermez l'application, le terminal ou le service qui possède chacun d'eux, puis relancez la mise à jour.",
     mixedBlockerBody:
-      'Hermes peut fermer les aperçus locaux ci-dessous. Les autres processus doivent être fermés manuellement avant de poursuivre la mise à jour.',
+      'Qubinter peut fermer les aperçus locaux ci-dessous. Les autres processus doivent être fermés manuellement avant de poursuivre la mise à jour.',
     closePreviewsAndUpdate: 'Fermer les aperçus et mettre à jour',
     closePreviewsAndCheckAgain: 'Fermer les aperçus et revérifier',
     localPreview: 'Aperçu local',
@@ -4683,12 +4683,12 @@ export const frOverrides = {
     sessionsTitle: 'Chaque profil conserve ses propres sessions',
     sessionsText:
       'Cette liste appartient au profil par défaut. Nouvelle session démarre une tâche sur le profil sélectionné. Changez de profil dans la barre et la liste change avec lui.',
-    stayTitle: "Hermes reste à portée d'un clic",
+    stayTitle: "Qubinter reste à portée d'un clic",
     stayText:
-      'Passez au profil de configuration et ouvrez Bienvenue dans Hermes lorsque vous avez besoin d’aide. La conversation y reste disponible.'
+      'Passez au profil de configuration et ouvrez Bienvenue dans Qubinter lorsque vous avez besoin d’aide. La conversation y reste disponible.'
   },
   guidedGreeting: {
-    line: "Salut, entrez ! Je suis Hermes. Donnez-moi deux minutes pour préparer les lieux à votre façon, puis nous nous attaquerons à quelque chose que vous voulez vraiment accomplir.\n\nMais d'abord, comment dois-je vous appeler ?",
+    line: "Salut, entrez ! Je suis Qubinter. Donnez-moi deux minutes pour préparer les lieux à votre façon, puis nous nous attaquerons à quelque chose que vous voulez vraiment accomplir.\n\nMais d'abord, comment dois-je vous appeler ?",
     nameSuggestion: name => `(Je peux aussi simplement vous appeler ${name}, si vous préférez.)`
   },
   install: {
@@ -4699,7 +4699,7 @@ export const frOverrides = {
       skipped: 'Ignoré',
       failed: 'Échoué'
     },
-    oneTimeTitle: 'Hermes nécessite une installation unique',
+    oneTimeTitle: 'Qubinter nécessite une installation unique',
     unsupportedDesc: platform =>
       `L'installation automatisée au premier lancement n'est pas encore disponible sur ${platform}. Ouvrez le Terminal et exécutez la commande ci-dessous, puis relancez cette application. Les lancements suivants ignoreront cette étape.`,
     installCommand: "Commande d'installation",
@@ -4707,7 +4707,7 @@ export const frOverrides = {
     viewDocs: "Voir la documentation d'installation",
     installTo: 'Sera installé dans',
     retryAfterRun: "Je l'ai exécuté — réessayer",
-    setupChoiceTitle: 'Configurer Hermes Desktop',
+    setupChoiceTitle: 'Configurer Qubinter Desktop',
     setupChoiceDesc:
       'Connectez cette application à un gateway Hermes que vous exécutez déjà, ou installez Hermes localement sur cet ordinateur.',
     connectExistingTitle: 'Se connecter à un Hermes existant',
@@ -4716,10 +4716,10 @@ export const frOverrides = {
       'Utilisez un backend distant avec un jeton de session ou une connexion par navigateur. Aucune installation locale ne démarrera.',
     installLocalTitle: 'Installer Hermes localement',
     installLocalDesc: 'Téléchargez Hermes, créez son environnement Python et exécutez le backend sur cet ordinateur.',
-    localStartUnavailable: "L'installation locale n'a pas pu démarrer. Redémarrez Hermes Desktop et réessayez.",
+    localStartUnavailable: "L'installation locale n'a pas pu démarrer. Redémarrez Qubinter Desktop et réessayez.",
     remoteSetupTitle: 'Se connecter à un Hermes existant',
     remoteSetupDesc:
-      "Entrez l'URL du gateway. Hermes Desktop détectera s'il a besoin d'un jeton ou d'une connexion par navigateur.",
+      "Entrez l'URL du gateway. Qubinter Desktop détectera s'il a besoin d'un jeton ou d'une connexion par navigateur.",
     remoteUrlTitle: 'URL du gateway',
     remoteUrlDesc: "Utilisez l'URL de base du gateway Hermes, y compris https:// pour les connexions distantes.",
     remoteUrlPlaceholder: 'https://gateway.example.com/hermes',
@@ -4745,12 +4745,12 @@ export const frOverrides = {
     applyRemote: 'Appliquer et se reconnecter',
     backToSetup: 'Retour',
     failedTitle: "Échec de l'installation",
-    settingUpTitle: 'Configuration de Hermes Agent',
+    settingUpTitle: 'Configuration de Qubinter Agent',
     finishingTitle: 'Finalisation',
     failedDesc:
-      "L'une des étapes d'installation a échoué. Sous Windows, cela peut arriver si une autre instance Hermes CLI ou desktop est en cours d'exécution. Arrêtez toutes les instances Hermes en cours, puis réessayez. Consultez les détails ci-dessous ou le journal du bureau pour la transcription complète.",
+      "L'une des étapes d'installation a échoué. Sous Windows, cela peut arriver si une autre instance Qubinter CLI ou desktop est en cours d'exécution. Arrêtez toutes les instances Qubinter en cours, puis réessayez. Consultez les détails ci-dessous ou le journal du bureau pour la transcription complète.",
     activeDesc:
-      "Il s'agit d'une configuration unique. Le programme d'installation de Hermes télécharge les dépendances et configure votre machine. Les lancements suivants ignoreront cette étape.",
+      "Il s'agit d'une configuration unique. Le programme d'installation de Qubinter télécharge les dépendances et configure votre machine. Les lancements suivants ignoreront cette étape.",
     progress: (completed, total) => `${completed} sur ${total} étapes terminées`,
     currentStage: stage => ` -- actuellement : ${stage}`,
     fetchingManifest: "Récupération du manifeste d'installation...",
@@ -4768,12 +4768,12 @@ export const frOverrides = {
     openLogs: 'Ouvrir les journaux'
   },
   onboarding: {
-    headerTitle: 'Configurons Hermes Agent pour vous',
+    headerTitle: 'Configurons Qubinter Agent pour vous',
     headerDesc:
       'Connectez un fournisseur de modèles pour commencer à discuter. La plupart des options nécessitent un clic.',
     preparingInstall:
-      "Hermes finalise l'installation. Cela prend généralement moins d'une minute au premier lancement.",
-    starting: 'Démarrage de Hermes…',
+      "Qubinter finalise l'installation. Cela prend généralement moins d'une minute au premier lancement.",
+    starting: 'Démarrage de Qubinter…',
     lookingUpProviders: 'Recherche des fournisseurs...',
     collapse: 'Réduire',
     otherProviders: 'Autres fournisseurs',
@@ -4781,7 +4781,7 @@ export const frOverrides = {
     chooseLater: 'Je choisirai un fournisseur plus tard',
     recommended: 'Recommandé',
     connected: 'Connecté',
-    featuredPitch: 'Un abonnement, 300+ modèles de pointe — la méthode recommandée pour exécuter Hermes',
+    featuredPitch: 'Un abonnement, 300+ modèles de pointe — la méthode recommandée pour exécuter Qubinter',
     fireworksPitch: 'API de modèles directe — modèles de pointe hébergés par Fireworks',
     localModelsTitle: 'Exécuter des modèles en local',
     localModelsPitch: 'Aucun compte requis — téléchargez un modèle et exécutez-le sur cette machine',
@@ -4811,7 +4811,7 @@ export const frOverrides = {
       local: {
         short: 'auto-hébergé',
         description:
-          'Pointez Hermes vers un point de terminaison local ou auto-hébergé compatible OpenAI (vLLM, llama.cpp, Ollama, etc).'
+          'Pointez Qubinter vers un point de terminaison local ou auto-hébergé compatible OpenAI (vLLM, llama.cpp, Ollama, etc).'
       }
     },
     backToSignIn: 'Retour à la connexion',
@@ -4825,7 +4825,7 @@ export const frOverrides = {
     update: 'Mettre à jour',
     flowSubtitles: {
       pkce: 'Ouvre votre navigateur pour vous connecter, puis continue ici',
-      device_code: 'Ouvre une page de vérification dans votre navigateur — Hermes se connecte automatiquement',
+      device_code: 'Ouvre une page de vérification dans votre navigateur — Qubinter se connecte automatiquement',
       external: 'Connectez-vous une fois dans votre terminal, puis revenez discuter'
     },
     startingSignIn: provider => `Démarrage de la connexion pour ${provider}...`,
@@ -4843,12 +4843,12 @@ export const frOverrides = {
     pickDifferentProvider: 'Choisissez un autre fournisseur',
     signInWith: provider => `Se connecter avec ${provider}`,
     openedBrowser: provider => `Nous avons ouvert ${provider} dans votre navigateur.`,
-    authorizeThere: 'Autorisez Hermes là-bas.',
+    authorizeThere: 'Autorisez Qubinter là-bas.',
     copyAuthCode: "Copiez le code d'autorisation et collez-le ci-dessous.",
     pasteAuthCode: "Coller le code d'autorisation",
     reopenAuthPage: "Rouvrir la page d'autorisation",
     autoBrowser: provider =>
-      `Nous avons ouvert ${provider} dans votre navigateur. Autorisez Hermes là-bas et vous serez connecté automatiquement — rien à copier ou coller.`,
+      `Nous avons ouvert ${provider} dans votre navigateur. Autorisez Qubinter là-bas et vous serez connecté automatiquement — rien à copier ou coller.`,
     reopenSignInPage: 'Rouvrir la page de connexion',
     waitingAuthorize: 'En attente de votre autorisation...',
     externalPending: provider =>
@@ -4869,7 +4869,7 @@ export const frOverrides = {
   freeTier: {
     providerRowTitle: 'Nous · offre gratuite',
     providerRowPitch: 'Connectez-vous avec un compte Nous pour débloquer davantage de modèles et outils.',
-    readyTitle: 'Hermes est prêt.',
+    readyTitle: 'Qubinter est prêt.',
     readyCaption: 'Gratuit · connecteurs inclus',
     begin: 'Commencer',
     signInInstead: 'Se connecter plutôt avec un compte Nous',
@@ -4908,20 +4908,20 @@ export const frOverrides = {
     errorBody: "La connexion n'a pas abouti ; relancez-la.",
     busyHeading: 'Presque terminé',
     busyBody: wait =>
-      `Hermes n'a pas pu terminer votre connexion car le service Nous est occupé. Réessayez dans ${wait}. Votre session reste disponible entre-temps.`,
+      `Qubinter n'a pas pu terminer votre connexion car le service Nous est occupé. Réessayez dans ${wait}. Votre session reste disponible entre-temps.`,
     unreachableBody:
-      "Hermes n'a pas pu joindre le service Nous pour terminer votre connexion. Vérifiez votre connexion Internet et réessayez. Votre session reste disponible.",
+      "Qubinter n'a pas pu joindre le service Nous pour terminer votre connexion. Vérifiez votre connexion Internet et réessayez. Votre session reste disponible.",
     alreadySignedInHeading: 'Déjà connecté.',
-    alreadySignedInBody: 'Cette installation Hermes est déjà connectée à un compte Nous.',
+    alreadySignedInBody: 'Cette installation Qubinter est déjà connectée à un compte Nous.',
     setupFailed: {
       gateClosed:
-        'Cette version de Hermes ne peut pas démarrer sans compte Nous. Connectez-vous ou créez-en un gratuitement en une minute.',
+        'Cette version de Qubinter ne peut pas démarrer sans compte Nous. Connectez-vous ou créez-en un gratuitement en une minute.',
       paused:
-        "L'utilisation de Hermes sans connexion est momentanément suspendue. Hermes continuera à vérifier. La connexion est gratuite et vous permet de continuer immédiatement.",
+        "L'utilisation de Qubinter sans connexion est momentanément suspendue. Qubinter continuera à vérifier. La connexion est gratuite et vous permet de continuer immédiatement.",
       rateLimited: wait =>
-        `Beaucoup de personnes démarrent en ce moment ; Hermes réessaiera dans ${wait}. La connexion est gratuite et évite l'attente.`,
+        `Beaucoup de personnes démarrent en ce moment ; Qubinter réessaiera dans ${wait}. La connexion est gratuite et évite l'attente.`,
       unreachable:
-        "Hermes n'a pas pu joindre le service Nous. Vérifiez votre connexion Internet, puis appuyez sur Réessayer. Vous pouvez aussi connecter un autre fournisseur.",
+        "Qubinter n'a pas pu joindre le service Nous. Vérifiez votre connexion Internet, puis appuyez sur Réessayer. Vous pouvez aussi connecter un autre fournisseur.",
       serverError:
         'Le service Nous a rencontré un problème. Réessayez dans un instant ou connectez un autre fournisseur.',
       powRequired:
@@ -4929,7 +4929,7 @@ export const frOverrides = {
       locked:
         'Cette session ne peut pas continuer sans connexion. Connectez-vous ou créez un compte Nous gratuit pour poursuivre.',
       generic:
-        "Hermes n'a pas pu configurer l'accès gratuit sans connexion. Connectez-vous gratuitement ou choisissez un autre fournisseur.",
+        "Qubinter n'a pas pu configurer l'accès gratuit sans connexion. Connectez-vous gratuitement ou choisissez un autre fournisseur.",
       signInBelow: 'La connexion est gratuite. Choisissez Nous ci-dessous.',
       tryAgain: 'Réessayer',
       retrying: 'Nouvelle tentative…'
@@ -5026,13 +5026,13 @@ export const frOverrides = {
       update: 'mise à jour',
       updateInProgress: 'Mise à jour en cours',
       commitsBehind: (count, branch) => `${count} commit${count === 1 ? '' : 's'} en retard sur ${branch}`,
-      desktopVersion: version => `Hermes Desktop v${version}`,
+      desktopVersion: version => `Qubinter Desktop v${version}`,
       backendVersion: version => `Backend v${version}`,
       clientLabel: version => `client v${version}`,
       connectionSsh: host => `SSH : ${host}`,
       connectionRemote: host => `Distant : ${host}`,
       connectionCloud: host => `Cloud : ${host}`,
-      connectionCloudTooltip: host => `Hermes Cloud · ${host}`,
+      connectionCloudTooltip: host => `Qubinter Cloud · ${host}`,
       connectionSshTooltip: host => `SSH · ${host}`,
       connectionRemoteTooltip: host => `Distant · ${host}`,
       backendLabel: version => `backend v${version}`,
@@ -5187,7 +5187,7 @@ export const frOverrides = {
     binaryTitle: 'Cela ressemble à un fichier binaire',
     binaryBody: label => `L'aperçu de ${label} peut afficher du texte illisible.`,
     largeTitle: 'Ce fichier est volumineux',
-    largeBody: (label, size) => `${label} fait ${size}. Hermes n'affichera que les 512 Ko premiers.`,
+    largeBody: (label, size) => `${label} fait ${size}. Qubinter n'affichera que les 512 Ko premiers.`,
     previewAnyway: 'Aperçu quand même',
     truncated: 'Affichage des 512 Ko premiers.',
     noInlineTitle: 'Aucun aperçu en ligne',
@@ -5228,11 +5228,11 @@ export const frOverrides = {
         "Cette adresse pointe vers la machine qui exécute votre agent, pas vers celle-ci. Le panneau du navigateur charge les pages localement ; un serveur de développement distant nécessite donc une redirection de port ou un nom d'hôte accessible.",
       failedToLoad: "Échec du chargement de l'aperçu",
       tryAgain: 'Réessayer',
-      restarting: 'Hermes redémarre...',
-      askRestart: 'Demander à Hermes de redémarrer le serveur',
-      lookingRestart: taskId => `Hermes recherche un serveur d'aperçu à redémarrer (${taskId})`,
+      restarting: 'Qubinter redémarre...',
+      askRestart: 'Demander à Qubinter de redémarrer le serveur',
+      lookingRestart: taskId => `Qubinter recherche un serveur d'aperçu à redémarrer (${taskId})`,
       restartingTitle: "Redémarrage du serveur d'aperçu",
-      restartingMessage: "Hermes travaille en arrière-plan. Surveillez la console d'aperçu pour suivre la progression.",
+      restartingMessage: "Qubinter travaille en arrière-plan. Surveillez la console d'aperçu pour suivre la progression.",
       startRestartFailed: message => `Impossible de démarrer le redémarrage du serveur : ${message}`,
       restartFailed: 'Échec du redémarrage du serveur',
       hideConsole: "Masquer la console d'aperçu",
@@ -5244,17 +5244,17 @@ export const frOverrides = {
       reload: 'Recharger la page',
       address: 'Adresse',
       addressPlaceholder: 'Saisir une adresse',
-      blankPageBody: "Saisissez une adresse ci-dessus pour naviguer, ou demandez à Hermes d'ouvrir une page.",
+      blankPageBody: "Saisissez une adresse ci-dessus pour naviguer, ou demandez à Qubinter d'ouvrir une page.",
       finishedRestarting: message =>
-        `Hermes a terminé le redémarrage du serveur d'aperçu${message ? `: ${message}` : ''}`,
+        `Qubinter a terminé le redémarrage du serveur d'aperçu${message ? `: ${message}` : ''}`,
       failedRestarting: message => `Échec du redémarrage du serveur : ${message}`,
       unknownError: 'erreur inconnue',
       restartedTitle: "Serveur d'aperçu redémarré",
       reloadingNow: "Rechargement de l'aperçu maintenant.",
       restartFailedTitle: "Échec du redémarrage de l'aperçu",
-      restartFailedMessage: "Hermes n'a pas pu redémarrer le serveur.",
+      restartFailedMessage: "Qubinter n'a pas pu redémarrer le serveur.",
       stillWorking:
-        "Hermes travaille toujours, mais aucun résultat de redémarrage n'est arrivé. La commande du serveur peut être en cours d'exécution au premier plan.",
+        "Qubinter travaille toujours, mais aucun résultat de redémarrage n'est arrivé. La commande du serveur peut être en cours d'exécution au premier plan.",
       workspaceReloading: "Espace de travail modifié, rechargement de l'aperçu",
       fileChanged: url => `Fichier modifié, rechargement de l'aperçu : ${url}`,
       filesChanged: (count, url) => `${count} modifications de fichier, rechargement de l'aperçu : ${url}`,
@@ -5279,13 +5279,13 @@ export const frOverrides = {
   },
   interfaceMode: {
     title: 'Mode d’interface',
-    hint: 'Modifie ce qui est affiché, pas ce que Hermes peut faire.',
+    hint: 'Modifie ce qui est affiché, pas ce que Qubinter peut faire.',
     sessionNote:
       'Défini par le mode Simple. Une modification ici dure le temps de cette session ; passez en mode Avancé pour la conserver.',
     simple: {
       label: 'Simple',
       description:
-        'Pour discuter avec Hermes. Barre latérale et conversation ; pas de panneaux terminal, fichiers ou diff.'
+        'Pour discuter avec Qubinter. Barre latérale et conversation ; pas de panneaux terminal, fichiers ou diff.'
     },
     advanced: {
       label: 'Avancé',
@@ -5370,7 +5370,7 @@ export const frOverrides = {
     thread: {
       loadingSession: 'Chargement de la session',
       showEarlier: 'Afficher les messages précédents',
-      loadingResponse: 'Hermes charge une réponse',
+      loadingResponse: 'Qubinter charge une réponse',
       loadingLocalModel: model => `Chargement de ${model} en mémoire`,
       processingPrompt: "Traitement de l'invite",
       resumeWhenBackgroundDone: count =>
@@ -5405,17 +5405,17 @@ export const frOverrides = {
         auth: "Le service d'IA a refusé votre connexion. Vérifiez les identifiants de ce fournisseur, puis renvoyez votre message.",
         billing:
           "Votre compte n'a plus de crédits chez ce fournisseur. Rechargez-le ou changez de fournisseur, puis réessayez.",
-        disk: "Votre disque est plein ; Hermes n'a pas pu enregistrer cette conversation. Libérez de l'espace, puis réessayez.",
+        disk: "Votre disque est plein ; Qubinter n'a pas pu enregistrer cette conversation. Libérez de l'espace, puis réessayez.",
         endpoint:
-          "Hermes ne parvient pas à joindre votre serveur de modèle personnalisé. Vérifiez qu'il fonctionne, puis renvoyez votre message.",
+          "Qubinter ne parvient pas à joindre votre serveur de modèle personnalisé. Vérifiez qu'il fonctionne, puis renvoyez votre message.",
         gateway:
-          'Hermes a rencontré un problème interne au démarrage de cette réponse. Renvoyez votre message ; si cela persiste, envoyez les diagnostics.',
+          'Qubinter a rencontré un problème interne au démarrage de cette réponse. Renvoyez votre message ; si cela persiste, envoyez les diagnostics.',
         generic:
-          "Une erreur s'est produite pendant la réponse de Hermes. Réessayez ou copiez les détails si cela persiste.",
+          "Une erreur s'est produite pendant la réponse de Qubinter. Réessayez ou copiez les détails si cela persiste.",
         provider:
           "Le service d'IA n'a pas pu traiter cette demande. Réessayez dans un instant ou changez de fournisseur.",
         runtime:
-          'Hermes a rencontré un problème interne au démarrage de cette réponse. Renvoyez votre message ; si cela persiste, envoyez les diagnostics.',
+          'Qubinter a rencontré un problème interne au démarrage de cette réponse. Renvoyez votre message ; si cela persiste, envoyez les diagnostics.',
         streaming: 'La connexion a été interrompue avant la fin de la réponse. Réessayez pour la renvoyer.'
       },
       errorCodes: {
@@ -5468,7 +5468,7 @@ export const frOverrides = {
         ssl_cert_verification: {
           title: 'Échec de la connexion sécurisée',
           body: provider =>
-            `Hermes n'a pas pu vérifier la connexion sécurisée à ${provider}. Vérifiez votre réseau ou votre proxy, ou changez de fournisseur.`
+            `Qubinter n'a pas pu vérifier la connexion sécurisée à ${provider}. Vérifiez votre réseau ou votre proxy, ou changez de fournisseur.`
         },
         context_overflow: {
           title: 'Cette conversation est trop longue',
@@ -5503,26 +5503,26 @@ export const frOverrides = {
         },
         invalid_response: {
           title: "Le service d'IA a envoyé une réponse illisible",
-          body: provider => `${provider} a renvoyé une réponse que Hermes n'a pas pu lire. Réessayez dans un instant.`
+          body: provider => `${provider} a renvoyé une réponse que Qubinter n'a pas pu lire. Réessayez dans un instant.`
         },
         empty_response: {
           title: "Le service d'IA a envoyé une réponse vide",
           body: provider => `${provider} n'a rien renvoyé pour ce message. Réessayez dans un instant.`
         },
         loop_error: {
-          title: 'Hermes est resté bloqué dans une boucle',
-          body: 'La réponse répétait les mêmes étapes ; Hermes l’a donc arrêtée. Réessayez ou démarrez une nouvelle conversation.'
+          title: 'Qubinter est resté bloqué dans une boucle',
+          body: 'La réponse répétait les mêmes étapes ; Qubinter l’a donc arrêtée. Réessayez ou démarrez une nouvelle conversation.'
         },
         SESSION_NOT_OWNED: {
           title: 'Cette conversation est ouverte ailleurs',
-          body: 'Cette conversation est déjà ouverte dans une autre fenêtre Hermes ou un terminal. Fermez-la là-bas puis réessayez, ou démarrez-en une nouvelle ici.'
+          body: 'Cette conversation est déjà ouverte dans une autre fenêtre Qubinter ou un terminal. Fermez-la là-bas puis réessayez, ou démarrez-en une nouvelle ici.'
         },
         disk_full: {
           title: 'Disque plein',
-          body: "Votre disque est plein ; Hermes n'a pas pu enregistrer cette conversation. Libérez de l'espace puis réessayez."
+          body: "Votre disque est plein ; Qubinter n'a pas pu enregistrer cette conversation. Libérez de l'espace puis réessayez."
         },
         free_tier_disabled: {
-          title: "L'utilisation de Hermes sans connexion est désactivée pour le moment",
+          title: "L'utilisation de Qubinter sans connexion est désactivée pour le moment",
           body: 'Connectez-vous avec un compte Nous gratuit pour continuer.'
         },
         free_tier_rate_limited: {
@@ -5535,10 +5535,10 @@ export const frOverrides = {
         },
         free_tier_model_not_free: {
           title: "Ce modèle n'est pas disponible sans connexion",
-          body: 'Hermes utilise le modèle gratuit pour le moment. Connectez-vous avec un compte Nous gratuit pour accéder à plus de modèles.'
+          body: 'Qubinter utilise le modèle gratuit pour le moment. Connectez-vous avec un compte Nous gratuit pour accéder à plus de modèles.'
         },
         free_tier_route: {
-          title: "Hermes n'a pas pu joindre le modèle gratuit par cette route",
+          title: "Qubinter n'a pas pu joindre le modèle gratuit par cette route",
           body: 'Connectez-vous avec un compte Nous gratuit ou vérifiez le paramètre NOUS_INFERENCE_BASE_URL.'
         },
         free_tier_outage: {
@@ -5546,7 +5546,7 @@ export const frOverrides = {
           body: 'Renvoyez votre message dans une minute.'
         },
         free_tier_refused: {
-          title: "Hermes n'a pas pu envoyer ce message sans connexion",
+          title: "Qubinter n'a pas pu envoyer ce message sans connexion",
           body: 'La connexion avec un compte Nous est gratuite.'
         }
       },
@@ -5562,7 +5562,7 @@ export const frOverrides = {
       },
       errorDetails: 'Détails',
       errorGenericProvider: "Le service d'IA",
-      errorToastTitle: "Hermes n'a pas pu terminer la réponse",
+      errorToastTitle: "Qubinter n'a pas pu terminer la réponse",
       errorRetry: 'Réessayer',
       errorLimitResets: (time: string) => `Le quota se réinitialise à ${time}`,
       errorRetryAtReset: (time: string) => `Réessayer à la réinitialisation du quota (${time})`,
@@ -5573,8 +5573,8 @@ export const frOverrides = {
       errorChooseModel: 'Choisir un modèle',
       errorCompressConversation: 'Compresser la conversation',
       errorCompressFailed: 'Impossible de compresser la conversation',
-      errorOpenHermesFolder: 'Ouvrir le dossier Hermes',
-      errorOpenHermesFolderFailed: "Impossible d'ouvrir le dossier Hermes",
+      errorOpenHermesFolder: 'Ouvrir le dossier Qubinter',
+      errorOpenHermesFolderFailed: "Impossible d'ouvrir le dossier Qubinter",
       errorUpdateApiKey: 'Mettre à jour la clé API',
       errorSignInAgain: provider => `Se reconnecter à ${provider}`,
       errorSignInFreeTier: 'Se connecter avec un compte Nous',
@@ -5608,11 +5608,11 @@ export const frOverrides = {
       attachingFile: 'Ajout en cours…'
     },
     approval: {
-      gatewayDisconnected: "La Gateway Hermes n'est pas connectée",
+      gatewayDisconnected: "La Gateway Qubinter n'est pas connectée",
       sendFailed: "Impossible d'envoyer la réponse d'approbation",
       reconnect: 'Se reconnecter',
       timedOutSystemLine:
-        "Le délai d'approbation a expiré — la commande n'a pas été exécutée. Demandez à Hermes de réessayer ou augmentez la limite dans Paramètres → Sécurité → Délai d'approbation.",
+        "Le délai d'approbation a expiré — la commande n'a pas été exécutée. Demandez à Qubinter de réessayer ou augmentez la limite dans Paramètres → Sécurité → Délai d'approbation.",
       openSafetySettings: 'Ouvrir les paramètres de sécurité',
       run: 'Exécuter',
       command: 'Commande',
@@ -5623,12 +5623,12 @@ export const frOverrides = {
       reject: 'Rejeter',
       alwaysTitle: 'Toujours autoriser cette commande ?',
       alwaysDescription: pattern =>
-        `Cela ajoute le motif « ${pattern} » à votre liste d'autorisation permanente (~/.hermes/config.yaml). Hermes ne redemandera plus pour ce type de commande — que ce soit dans cette session ou dans une session future.`,
+        `Cela ajoute le motif « ${pattern} » à votre liste d'autorisation permanente (~/.hermes/config.yaml). Qubinter ne redemandera plus pour ce type de commande — que ce soit dans cette session ou dans une session future.`,
       alwaysAllow: 'Toujours autoriser'
     },
     clarify: {
       notReady: "La demande de clarification n'est pas encore prête",
-      gatewayDisconnected: "La Gateway Hermes n'est pas connectée",
+      gatewayDisconnected: "La Gateway Qubinter n'est pas connectée",
       sendFailed: "Impossible d'envoyer la réponse de clarification",
       loadingQuestion: 'Chargement de la question…',
       other: 'Autre (saisissez votre réponse)',
@@ -5693,7 +5693,7 @@ export const frOverrides = {
       sendFailed: "Impossible d'envoyer la réponse de configuration MCP",
       reloadFailed:
         'Serveur enregistré, mais le rechargement des outils MCP a échoué — ils seront chargés à la prochaine session',
-      gatewayDisconnected: "La Gateway Hermes n'est pas connectée"
+      gatewayDisconnected: "La Gateway Qubinter n'est pas connectée"
     },
     tool: {
       copyCode: 'Copier le code',
@@ -5878,20 +5878,20 @@ export const frOverrides = {
     }
   },
   prompts: {
-    gatewayDisconnected: "La Gateway Hermes n'est pas connectée",
+    gatewayDisconnected: "La Gateway Qubinter n'est pas connectée",
     reconnect: 'Se reconnecter',
     sudoSendFailed: "Impossible d'envoyer le mot de passe sudo",
     secretSendFailed: "Impossible d'envoyer le secret",
     sudoTitle: 'Mot de passe administrateur',
     sudoDesc:
-      "Hermes a besoin de votre mot de passe sudo pour exécuter une commande privilégiée. Il n'est envoyé qu'à votre agent local.",
+      "Qubinter a besoin de votre mot de passe sudo pour exécuter une commande privilégiée. Il n'est envoyé qu'à votre agent local.",
     sudoCommandUnavailable:
       "Cet agent n'a pas fourni la commande. Annulez si vous ne pouvez pas la vérifier dans la conversation.",
     sudoInstallDesc:
-      'Hermes a besoin de votre mot de passe sudo pour installer les paquets de Bot Screen (TigerVNC + Xfce) sur l’hôte du gateway. Il n’est envoyé qu’à cet hôte.',
+      'Qubinter a besoin de votre mot de passe sudo pour installer les paquets de Bot Screen (TigerVNC + Xfce) sur l’hôte du gateway. Il n’est envoyé qu’à cet hôte.',
     sudoPlaceholder: 'mot de passe sudo',
     secretTitle: 'Secret requis',
-    secretDesc: "Hermes a besoin d'un identifiant pour continuer.",
+    secretDesc: "Qubinter a besoin d'un identifiant pour continuer.",
     secretPlaceholder: 'valeur du secret',
     vaultUnlockSendFailed: "Impossible d'envoyer le mot de passe principal",
     vaultUnlockTitle: name => `Déverrouiller ${name}`,
@@ -5903,7 +5903,7 @@ export const frOverrides = {
     vaultSaveSendFailed: "Impossible d'enregistrer l'identifiant",
     vaultSaveTitle: site => `Enregistrer votre identifiant ${site} ?`,
     vaultSaveDesc: origin =>
-      `Hermes a atteint une page de connexion sur ${origin} et ne possède aucun identifiant pour celle-ci. Saisissez-le une fois ici : il sera chiffré sur cet ordinateur et rempli dans la page sans que le modèle voie le mot de passe.`,
+      `Qubinter a atteint une page de connexion sur ${origin} et ne possède aucun identifiant pour celle-ci. Saisissez-le une fois ici : il sera chiffré sur cet ordinateur et rempli dans la page sans que le modèle voie le mot de passe.`,
     vaultSaveIdentifierLabel: "Adresse e-mail ou nom d'utilisateur",
     vaultSaveIdentifierPlaceholder: 'vous@exemple.fr',
     vaultSavePasswordPlaceholder: 'Mot de passe',
@@ -5913,10 +5913,10 @@ export const frOverrides = {
     vaultCodeSendFailed: "Impossible d'envoyer le code",
     vaultCodeTitle: site => `Code de vérification pour ${site}`,
     vaultCodeDesc: site =>
-      `${site} demande un code à usage unique reçu par SMS, e-mail ou application d'authentification. Saisissez-le ici : Hermes le remplira dans la page sans que le modèle le voie.`,
+      `${site} demande un code à usage unique reçu par SMS, e-mail ou application d'authentification. Saisissez-le ici : Qubinter le remplira dans la page sans que le modèle le voie.`,
     vaultCodeLabel: 'Code',
     vaultCodeFootnote:
-      "Astuce : enregistrez la clé d'authentification avec cet identifiant dans Paramètres → Mots de passe et identifiants ; Hermes saisira alors les codes pour vous.",
+      "Astuce : enregistrez la clé d'authentification avec cet identifiant dans Paramètres → Mots de passe et identifiants ; Qubinter saisira alors les codes pour vous.",
     vaultCodeSkip: 'Ignorer',
     vaultCodeConfirm: 'Saisir le code'
   },
@@ -5990,8 +5990,8 @@ export const frOverrides = {
     sessionExportFailed: "Impossible d'exporter la session",
     imageSaved: 'Image enregistrée',
     downloadStarted: 'Téléchargement démarré',
-    restartToUseSaveImage: "Redémarrez Hermes Desktop pour utiliser Enregistrer l'image.",
-    restartToSaveImages: 'Redémarrez Hermes Desktop pour enregistrer les images',
+    restartToUseSaveImage: "Redémarrez Qubinter Desktop pour utiliser Enregistrer l'image.",
+    restartToSaveImages: 'Redémarrez Qubinter Desktop pour enregistrer les images',
     imageDownloadFailed: "Échec du téléchargement de l'image",
     openImage: "Ouvrir l'image",
     downloadImage: "Télécharger l'image",
@@ -6025,14 +6025,14 @@ export const frOverrides = {
       },
       skills: {
         title: 'Apprenez-lui une seule fois',
-        text: "Les compétences sont des dossiers d'instructions que Hermes charge lorsque le travail le nécessite."
+        text: "Les compétences sont des dossiers d'instructions que Qubinter charge lorsque le travail le nécessite."
       },
       messaging: {
-        title: 'Hermes loin de votre bureau',
+        title: 'Qubinter loin de votre bureau',
         text: 'Connectez Telegram, Discord, Slack et plus encore : même agent, même mémoire.'
       },
       artifacts: {
-        title: 'Tout ce que Hermes a créé',
+        title: 'Tout ce que Qubinter a créé',
         text: 'Images, fichiers et liens de chaque session, indexés au même endroit.'
       },
       cron: {
@@ -6045,7 +6045,7 @@ export const frOverrides = {
       },
       profiles: {
         title: 'Les profils sont séparés',
-        text: 'Chacun possède son propre Hermes, avec ses clés, sa mémoire et ses sessions.'
+        text: 'Chacun possède son propre Qubinter, avec ses clés, sa mémoire et ses sessions.'
       },
       'composer-mentions': {
         title: 'Joindre et commander',

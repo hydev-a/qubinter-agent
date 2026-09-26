@@ -319,3 +319,6 @@ native/fts5_cjk/*.so
 /pm/.lock.json.lock
 
 apps/desktop/.dist-build*
+
+# Windows download metadata can appear as a sidecar file when assets are copied.
+*:Zone.Identifier

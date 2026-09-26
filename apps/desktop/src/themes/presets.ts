@@ -44,6 +44,14 @@ const SYSTEM_MONO =
 
 export const DEFAULT_TYPOGRAPHY: DesktopThemeTypography = { fontSans: SYSTEM_SANS, fontMono: SYSTEM_MONO }
 
+export const qubinterTheme: DesktopTheme = {
+  name: 'qubinter',
+  label: 'Qubinter',
+  description: 'Quiet navy, steel blue, and amber from the Qubinter mark',
+  ...THEME_PRESET_PALETTES.qubinter,
+  typography: { fontSans: SYSTEM_SANS, fontMono: SYSTEM_MONO }
+}
+
 /**
  * Nous — the canonical Hermes desktop identity, forked from the GitHub VS Code
  * theme (github.github-vscode-theme). Light is GitHub Light Default, dark is
@@ -128,8 +136,8 @@ export const githubTheme: DesktopTheme = {
  */
 export const nousTheme: DesktopTheme = {
   name: 'nous',
-  label: 'Nous',
-  description: 'GitHub chrome, Nous blue accent',
+  label: 'Classic Blue',
+  description: 'GitHub chrome with a vivid blue accent',
   ...THEME_PRESET_PALETTES.nous,
   typography: {
     fontSans: SYSTEM_SANS,
@@ -328,7 +336,7 @@ export const solarizedTheme: DesktopTheme = {
  */
 export const nousAltTheme: DesktopTheme = {
   name: 'nous-alt',
-  label: 'Nous Alt',
+  label: 'Classic Blue Alt',
   description: 'Glass neutrals, cream on mission-blue',
   ...THEME_PRESET_PALETTES['nous-alt'],
   typography: {
@@ -396,6 +404,7 @@ export const slateTheme: DesktopTheme = {
 }
 
 export const BUILTIN_THEMES: Record<string, DesktopTheme> = {
+  qubinter: qubinterTheme,
   nous: nousTheme,
   github: githubTheme,
   catppuccin: catppuccinTheme,
@@ -412,4 +421,4 @@ export const BUILTIN_THEMES: Record<string, DesktopTheme> = {
 export const BUILTIN_THEME_LIST = Object.values(BUILTIN_THEMES)
 
 /** Skin used when nothing is persisted or the persisted name is retired. */
-export const DEFAULT_SKIN_NAME = 'nous'
+export const DEFAULT_SKIN_NAME = 'qubinter'

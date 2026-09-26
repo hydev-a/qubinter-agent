@@ -130,8 +130,8 @@ Reduced motion settles immediately without retaining empty clearance.
 Settings → Appearance → Window layout offers **Minimize to tray**, off by default and
 local to this desktop installation. When enabled, minimizing ordinary windows
 hides them without stopping their work. Close, Alt+F4, and Cmd+Q keep their
-normal behavior. The tray's **Show Hermes** restores hidden windows;
-**Quit Hermes** keeps the ordinary active-work confirmation and teardown.
+normal behavior. The tray's **Show Qubinter Agent** restores hidden windows;
+**Quit Qubinter Agent** keeps the ordinary active-work confirmation and teardown.
 On macOS the tray lives in the menu bar; the Dock icon hides only when no normal
 window remains visible and returns on restore. If the tray is unavailable,
 ordinary minimize/close behavior is retained rather than hiding an unreachable app.
@@ -224,8 +224,8 @@ context-dependent (e.g. "Show" / "Hide"). Never hardcode combos; always use
 `useKeybindHint` or `TipKeybindLabel`.
 
 Notes:
-- Text buttons are square (no radius) and sized by padding + line-height (no
-  fixed heights). Only icon buttons carry the shared 4px radius.
+- Text and icon buttons use a restrained 6px radius. Text buttons size by
+  padding and line-height, without fixed heights.
 - SVGs inherit `size-3.5` (`size-3` at `xs`). Don't re-set icon size.
 - Polymorph with `asChild` when the button must render as a link/Slot.
 

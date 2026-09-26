@@ -105,15 +105,15 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    expect(await screen.findByText('Set up Hermes Desktop')).toBeTruthy()
-    expect(screen.getByText('Connect to existing Hermes')).toBeTruthy()
-    expect(screen.getByText('Install Hermes locally')).toBeTruthy()
+    expect(await screen.findByText('Set up Qubinter Desktop')).toBeTruthy()
+    expect(screen.getByText('Connect to an existing agent')).toBeTruthy()
+    expect(screen.getByText('Install Qubinter locally')).toBeTruthy()
     expect(screen.getByText(/Will install to/i)).toBeTruthy()
     expect(screen.queryByText(/steps complete/i)).toBeNull()
     expect(screen.queryByText(/Fetching installer manifest/i)).toBeNull()
   })
 
-  it('continues local bootstrap only when Install Hermes locally is selected', async () => {
+  it('continues local bootstrap only when Install Qubinter locally is selected', async () => {
     const desktop = installDesktopMock(
       bootstrapState({
         setupChoice: {
@@ -127,16 +127,16 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Install Hermes locally'))
+    fireEvent.click(await screen.findByText('Install Qubinter locally'))
 
     expect(desktop.continueBootstrapLocal).toHaveBeenCalledTimes(1)
-    expect(screen.getByText('Set up Hermes Desktop')).toBeTruthy()
+    expect(screen.getByText('Set up Qubinter Desktop')).toBeTruthy()
 
     act(() => {
       desktop.emitBootstrapEvent({ type: 'manifest', protocolVersion: 1, stages: [] })
     })
 
-    await waitFor(() => expect(screen.queryByText('Set up Hermes Desktop')).toBeNull())
+    await waitFor(() => expect(screen.queryByText('Set up Qubinter Desktop')).toBeNull())
     expect(screen.getByText(/Fetching installer manifest/i)).toBeTruthy()
   })
 
@@ -155,11 +155,11 @@ describe('DesktopInstallOverlay first-run setup', () => {
     desktop.continueBootstrapLocal = undefined as never
     render(<DesktopInstallOverlay />)
 
-    const install = (await screen.findByText('Install Hermes locally')).closest('button') as HTMLButtonElement
+    const install = (await screen.findByText('Install Qubinter locally')).closest('button') as HTMLButtonElement
     fireEvent.click(install)
 
     expect(
-      await screen.findByText('Local installation could not start. Restart Hermes Desktop and try again.')
+      await screen.findByText('Local installation could not start. Restart Qubinter Desktop and try again.')
     ).toBeTruthy()
     expect(install.disabled).toBe(false)
   })
@@ -182,14 +182,14 @@ describe('DesktopInstallOverlay first-run setup', () => {
     // Click the instant the choice paints, before React drains the passive
     // effect that reacts to the first snapshot. A loaded runner hits this
     // window by accident; observing the DOM directly hits it every time.
-    const install = (await whenPresent('Install Hermes locally')).closest('button') as HTMLButtonElement
+    const install = (await whenPresent('Install Qubinter locally')).closest('button') as HTMLButtonElement
     fireEvent.click(install)
 
     await act(async () => {
       await Promise.resolve()
     })
 
-    expect(screen.queryByText('Local installation could not start. Restart Hermes Desktop and try again.')).toBeTruthy()
+    expect(screen.queryByText('Local installation could not start. Restart Qubinter Desktop and try again.')).toBeTruthy()
   })
 
   it('clears a stale local-start error when a repair presents a different root', async () => {
@@ -207,9 +207,9 @@ describe('DesktopInstallOverlay first-run setup', () => {
     desktop.continueBootstrapLocal = undefined as never
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click((await screen.findByText('Install Hermes locally')).closest('button') as HTMLButtonElement)
+    fireEvent.click((await screen.findByText('Install Qubinter locally')).closest('button') as HTMLButtonElement)
     expect(
-      await screen.findByText('Local installation could not start. Restart Hermes Desktop and try again.')
+      await screen.findByText('Local installation could not start. Restart Qubinter Desktop and try again.')
     ).toBeTruthy()
 
     act(() => {
@@ -221,7 +221,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
       })
     })
 
-    expect(screen.queryByText('Local installation could not start. Restart Hermes Desktop and try again.')).toBeNull()
+    expect(screen.queryByText('Local installation could not start. Restart Qubinter Desktop and try again.')).toBeNull()
   })
 
   it('opens the remote connection form from the first-run choice', async () => {
@@ -233,7 +233,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
 
     expect(await screen.findByText('Gateway URL')).toBeTruthy()
     expect(screen.getByText('Test connection')).toBeTruthy()
@@ -249,13 +249,13 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
     expect(await screen.findByText('Gateway URL')).toBeTruthy()
 
     fireEvent.click(screen.getByText('Back'))
 
-    expect(await screen.findByText('Set up Hermes Desktop')).toBeTruthy()
-    expect(screen.getByText('Install Hermes locally')).toBeTruthy()
+    expect(await screen.findByText('Set up Qubinter Desktop')).toBeTruthy()
+    expect(screen.getByText('Install Qubinter locally')).toBeTruthy()
   })
 
   it('requires a successful token connection test before applying remote config', async () => {
@@ -286,7 +286,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
     fireEvent.change(await screen.findByPlaceholderText('https://gateway.example.com/hermes'), {
       target: { value: 'https://gateway.example.com/hermes' }
     })
@@ -352,7 +352,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
     fireEvent.change(await screen.findByPlaceholderText('https://gateway.example.com/hermes'), {
       target: { value: 'https://gateway.example.com/hermes' }
     })
@@ -404,7 +404,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
     fireEvent.change(await screen.findByPlaceholderText('https://gateway.example.com/hermes'), {
       target: { value: 'https://gateway.example.com/hermes' }
     })
@@ -470,7 +470,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
       })
     )
     render(<DesktopInstallOverlay />)
-    fireEvent.click(await screen.findByText('Connect to existing Hermes'))
+    fireEvent.click(await screen.findByText('Connect to an existing agent'))
     const url = screen.getByPlaceholderText('https://gateway.example.com/hermes')
     fireEvent.change(url, { target: { value: 'https://a.example' } })
     fireEvent.click(await screen.findByRole('button', { name: /Sign in with/ }))
@@ -483,7 +483,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
     expect(saveConnectionConfig).not.toHaveBeenCalled()
     expect(desktop.applyConnectionConfig).not.toHaveBeenCalled()
     fireEvent.click(screen.getByText('Back'))
-    fireEvent.click(await screen.findByText('Install Hermes locally'))
+    fireEvent.click(await screen.findByText('Install Qubinter locally'))
     expect(desktop.continueBootstrapLocal).toHaveBeenCalledTimes(1)
     expect(saveConnectionConfig).not.toHaveBeenCalled()
   })
@@ -502,7 +502,7 @@ describe('DesktopInstallOverlay first-run setup', () => {
 
     render(<DesktopInstallOverlay />)
 
-    expect(await screen.findByText('Hermes needs a one-time install')).toBeTruthy()
+    expect(await screen.findByText('Qubinter needs a one-time install')).toBeTruthy()
 
     fireEvent.click(screen.getByText('Connect existing'))
 
@@ -543,14 +543,14 @@ describe('DesktopInstallOverlay first-run setup', () => {
     fireEvent.click(screen.getByText('Apply and reconnect'))
 
     await waitFor(() => expect(screen.queryByText('Gateway URL')).toBeNull())
-    expect(screen.queryByText('Hermes needs a one-time install')).toBeNull()
+    expect(screen.queryByText('Qubinter needs a one-time install')).toBeNull()
   })
 })
 
 it.each([
-  ['installed', false, 'Use Hermes on this computer', /already installed here/i, false],
-  ['bundled', true, 'Use Hermes on this computer', /included with this app/i, false],
-  [undefined, false, 'Install Hermes locally', /Will install to/i, true]
+  ['installed', false, 'Use Qubinter on this computer', /already installed here/i, false],
+  ['bundled', true, 'Use Qubinter on this computer', /included with this app/i, false],
+  [undefined, false, 'Install Qubinter locally', /Will install to/i, true]
 ] as const)(
   'local presentation for %s (including old backends)',
   async (
@@ -575,7 +575,7 @@ it.each([
     expect(screen.queryByText(/Will install to/i) !== null).toBe(footer)
 
     if (!footer) {
-      expect(screen.queryByText('Install Hermes locally')).toBeNull()
+      expect(screen.queryByText('Install Qubinter locally')).toBeNull()
     }
   }
 )

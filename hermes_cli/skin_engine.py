@@ -56,41 +56,38 @@ def _wings(*glyphs) -> List[List[str]]:
             for g in glyphs]
 
 
-# Branding shared by every Hermes-named built-in (mono/daylight override help_header).
+# Branding shared by the built-in skins (mono/daylight override help_header).
 _HERMES_BRANDING: Dict[str, str] = _branding(
-    "Hermes", "☤", "Goodbye! ☤", prompt="❯", help_header="(^_^)? Available Commands")
+    "Qubinter", "◈", "Goodbye from Qubinter.", prompt="❯", help_header="Qubinter Commands")
 
 _BUILTIN_SKINS: Dict[str, Dict[str, Any]] = {
     "default": {
-        "name": "default", "description": "Classic Hermes — gold and kawaii",
-        # Dark-authored; values match the TUI's DARK_THEME so both render the same gold.
+        "name": "default", "description": "Qubinter — navy, steel blue, and amber",
+        # Dark-authored; values match the TUI's Qubinter palette.
         "colors": {
-            "banner_border": "#CD7F32", "banner_title": "#FFD700", "banner_accent": "#FFBF00",
-            "banner_dim": "#B8860B", "banner_text": "#FFF8DC", "ui_accent": "#FFBF00",
-            "ui_label": "#DAA520", "ui_ok": "#4caf50", "ui_error": "#ef5350", "ui_warn": "#ffa726",
-            "prompt": "#FFF8DC", "input_rule": "#CD7F32", "response_border": "#FFD700",
-            "status_bar_bg": "#1a1a2e", "status_bar_text": "#C0C0C0",
-            "status_bar_strong": "#FFD700", "status_bar_dim": "#8A7A4A",
-            "status_bar_good": "#8FBC8F", "status_bar_warn": "#FFD700", "status_bar_bad": "#FF8C00",
-            "status_bar_critical": "#FF6B6B", "session_label": "#DAA520",
-            "session_border": "#8B8682", "completion_menu_bg": "#1a1a2e",
-            "completion_menu_current_bg": "#333355", "selection_bg": "#3a3a55",
-            "shell_dollar": "#4dabf7", "voice_status_bg": "#1a1a2e"},
-        # Light overlay (merged onto `colors`). Goldenrod ladder: on white the vivid
-        # #FFD700/#FFBF00 read as glare and WCAG-darkened mustard (#867000) as mud; the
-        # statusbar's goldenrod family (#B8860B/#DAA520) keeps the hue, tames saturation.
-        # Hierarchy on white: ink body 8.9:1 > fade 5.2 > label 3.7 > muted 3.3 > title 2.7 >
-        # headers 2.4. Fills (*_bg) flip the dark navy surfaces to light polarity.
+            "banner_border": "#607888", "banner_title": "#91b5cc", "banner_accent": "#d09048",
+            "banner_dim": "#607888", "banner_text": "#eaf1f5", "ui_accent": "#d09048",
+            "ui_label": "#91b5cc", "ui_ok": "#77c49b", "ui_error": "#ef8982", "ui_warn": "#e3a66a",
+            "prompt": "#eaf1f5", "input_rule": "#607888", "response_border": "#91b5cc",
+            "status_bar_bg": "#162b3e", "status_bar_text": "#eaf1f5",
+            "status_bar_strong": "#91b5cc", "status_bar_dim": "#a9becb",
+            "status_bar_good": "#77c49b", "status_bar_warn": "#d09048", "status_bar_bad": "#d09048",
+            "status_bar_critical": "#ef8982", "session_label": "#91b5cc",
+            "session_border": "#607888", "completion_menu_bg": "#162b3e",
+            "completion_menu_current_bg": "#294a62", "selection_bg": "#355267",
+            "shell_dollar": "#91b5cc", "voice_status_bg": "#162b3e"},
+        # Light overlay (merged onto `colors`): navy body, blue hierarchy,
+        # deeper amber accents, and light-polarity fills (*_bg).
         "light_colors": {
-            "banner_title": "#C8961E", "banner_accent": "#D89B04", "banner_dim": "#B8860B",
-            "banner_text": "#5C4718", "ui_accent": "#D89B04", "ui_label": "#A97E10",
-            "ui_ok": "#2E7D32", "ui_error": "#C62828", "ui_warn": "#D97706", "prompt": "#5C4718",
-            "response_border": "#C8961E", "session_label": "#A97E10", "status_bar_text": "#6F6F6F",
-            "status_bar_strong": "#C8961E", "status_bar_dim": "#9A8A5A",
-            "status_bar_good": "#2E7D32", "status_bar_warn": "#C8961E", "status_bar_bad": "#C2410C",
-            "status_bar_critical": "#B91C1C", "shell_dollar": "#1E6FC0",
-            "completion_menu_bg": "#F5F5F5", "completion_menu_current_bg": "#E0D1BF",
-            "selection_bg": "#D4E4F7", "status_bar_bg": "#F5F5F5", "voice_status_bg": "#F5F5F5"},
+            "banner_title": "#254c72", "banner_accent": "#9d5d21", "banner_dim": "#607888",
+            "banner_text": "#102030", "ui_accent": "#9d5d21", "ui_label": "#254c72",
+            "ui_ok": "#2E7D56", "ui_error": "#C14240", "ui_warn": "#9d5d21", "prompt": "#102030",
+            "response_border": "#254c72", "session_label": "#254c72", "status_bar_text": "#102030",
+            "status_bar_strong": "#254c72", "status_bar_dim": "#526677",
+            "status_bar_good": "#2E7D56", "status_bar_warn": "#9d5d21", "status_bar_bad": "#9d5d21",
+            "status_bar_critical": "#C14240", "shell_dollar": "#2f628d",
+            "completion_menu_bg": "#edf3f5", "completion_menu_current_bg": "#d5e0e6",
+            "selection_bg": "#d5e0e6", "status_bar_bg": "#edf3f5", "voice_status_bg": "#edf3f5"},
         "spinner": {},  # empty = hardcoded defaults in display.py
         "branding": _HERMES_BRANDING,
         "tool_prefix": "┊"},

@@ -252,13 +252,13 @@ export function themeToneHex(tone: string): string {
 // ── Defaults ─────────────────────────────────────────────────────────
 
 const BRAND: ThemeBrand = {
-  name: 'Hermes Agent',
-  icon: '☤',
+  name: 'Qubinter Agent',
+  icon: '◈',
   prompt: '❯',
   welcome: 'Type your message or /help for commands.',
-  goodbye: 'Goodbye! ☤',
+  goodbye: 'Goodbye from Qubinter.',
   tool: '┊',
-  helpHeader: '(^_^)? Commands'
+  helpHeader: 'Qubinter Commands'
 }
 
 const cleanPromptSymbol = (s: string | undefined, fallback: string) => {
@@ -370,51 +370,44 @@ export function buildPalette(seeds: ThemeSeeds, isLight: boolean): ThemeColors {
 }
 
 export const DARK_SEEDS: ThemeSeeds = {
-  accent: '#FFBF00',
-  // The classic Hermes navy surfaces are IDENTITY, not derivation drift —
-  // keep them as explicit fill seeds (the ladder derives them for skins
-  // that don't care).
-  activeRow: '#333355',
-  bg: '#101014',
-  border: '#CD7F32',
+  accent: '#d09048',
+  // Qubinter's navy surfaces are explicit fill seeds so the terminal theme
+  // carries the same identity as the desktop and dashboard.
+  activeRow: '#294a62',
+  bg: '#102030',
+  border: '#607888',
   error: '#ef5350',
   ok: '#4caf50',
-  primary: '#FFD700',
-  prompt: '#FFF8DC',
-  selection: '#3a3a55',
-  shellDollar: '#4dabf7',
-  statusBad: '#FF8C00',
+  primary: '#91b5cc',
+  prompt: '#eaf1f5',
+  selection: '#355267',
+  shellDollar: '#91b5cc',
+  statusBad: '#d09048',
   statusCritical: '#FF6B6B',
   statusGood: '#8FBC8F',
-  statusWarn: '#FFD700',
-  surface: '#1a1a2e',
-  text: '#FFF8DC',
-  warn: '#ffa726'
+  statusWarn: '#d09048',
+  surface: '#162b3e',
+  text: '#eaf1f5',
+  warn: '#e3a66a'
 }
 
-// Light-terminal seeds: darker golds/ambers that stay legible on white.
-// The classic light-mode Hermes look was never hand-authored: for years the
-// TUI emitted the DARK golds and hosts with xterm's minimumContrastRatio
-// (Cursor defaults to 4.5) lifted them against white — hue and saturation
-// kept, luminance clamped. These seeds are those exact lifts
-// (liftForContrast(dark, '#ffffff', 4.5)), so hosts WITHOUT a contrast pass
-// render the same thing Cursor always showed. Text/prompt stay ink — body
-// copy historically rendered in the terminal's default near-black fg.
+// Light-terminal seeds use navy text, steel blue dividers, and a deeper amber
+// so the brand stays legible on a pale background without host contrast lifting.
 export const LIGHT_SEEDS: ThemeSeeds = {
-  accent: '#956E00',
-  bg: '#ffffff',
-  border: '#A56628',
+  accent: '#9d5d21',
+  bg: '#f7f9fa',
+  border: '#607888',
   error: '#C14240',
   ok: '#367E39',
-  primary: '#867000',
-  prompt: '#2B2014',
-  shellDollar: '#377BB3',
-  statusBad: '#A65A00',
+  primary: '#254c72',
+  prompt: '#102030',
+  shellDollar: '#2f628d',
+  statusBad: '#9d5d21',
   statusCritical: '#B94D4D',
   statusGood: '#5C7A5C',
-  statusWarn: '#867000',
-  text: '#3D2F13',
-  warn: '#956115'
+  statusWarn: '#9d5d21',
+  text: '#102030',
+  warn: '#9d5d21'
 }
 
 export const DARK_THEME: Theme = {

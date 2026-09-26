@@ -61,7 +61,7 @@ test('resolving a packaged icon never probes a path inside app.asar', () => {
   const resources = path.join('/opt', 'Hermes', 'resources')
   const appRoot = path.join(resources, 'app.asar')
   const unpackedPathFor = (p: string) => p.replace(/app\.asar(?=$|[\\/])/, 'app.asar.unpacked')
-  const unpackedIcon = path.join(unpackedPathFor(appRoot), 'dist', 'apple-touch-icon.png')
+  const unpackedIcon = path.join(unpackedPathFor(appRoot), 'dist', 'qubinter-icon.png')
 
   const resourcesIco = path.join(resources, 'icon.ico')
 
@@ -69,6 +69,8 @@ test('resolving a packaged icon never probes a path inside app.asar', () => {
   const shipped = new Set([
     resourcesIco,
     path.join(appRoot, 'assets', 'icon.ico'),
+    path.join(appRoot, 'public', 'qubinter-icon.png'),
+    path.join(appRoot, 'dist', 'qubinter-icon.png'),
     path.join(appRoot, 'public', 'apple-touch-icon.png'),
     path.join(appRoot, 'dist', 'apple-touch-icon.png'),
     unpackedIcon
@@ -103,6 +105,9 @@ test('appIconCandidates keeps the documented precedence ladder', () => {
   })
 
   assert.deepEqual(mac, [
+    path.join('/Applications/Hermes.app/Contents/Resources.unpacked', 'dist', 'qubinter-icon.png'),
+    path.join('/Applications/Hermes.app/Contents/Resources', 'public', 'qubinter-icon.png'),
+    path.join('/Applications/Hermes.app/Contents/Resources', 'dist', 'qubinter-icon.png'),
     path.join('/Applications/Hermes.app/Contents/Resources.unpacked', 'dist', 'apple-touch-icon.png'),
     path.join('/Applications/Hermes.app/Contents/Resources', 'public', 'apple-touch-icon.png'),
     path.join('/Applications/Hermes.app/Contents/Resources', 'dist', 'apple-touch-icon.png')

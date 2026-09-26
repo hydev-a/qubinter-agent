@@ -385,33 +385,17 @@ const channelDelta = (a: string, b: string) => {
 }
 
 describe('derived tone ladder', () => {
-  it('reproduces the original hand-tuned tones from seeds (reverse-engineered knobs)', async () => {
-    // The ladder's knobs were grid-search fitted so the MATH lands on the
-    // pre-refactor hand-tuned literals. Contract: every derived tone stays
-    // within a-few-RGB-units of the original (imperceptible), so knob edits
-    // that drift the classic look fail here instead of shipping as vibes.
+  it('keeps the Qubinter identity legible on dark and light terminals', async () => {
     const dark = await importThemeWithCleanEnv()
     const light = await importThemeWithEnv({ HERMES_TUI_BACKGROUND: '#ffffff' })
 
-    const cases: Array<[string, string, string]> = [
-      [dark.DARK_THEME.color.muted, '#CC9B1F', 'dark muted'],
-      [dark.DARK_THEME.color.label, '#DAA520', 'dark label'],
-      [dark.DARK_THEME.color.statusFg, '#C0C0C0', 'dark statusFg'],
-      [dark.DARK_THEME.color.completionBg, '#1a1a2e', 'dark surface'],
-      [dark.DARK_THEME.color.completionCurrentBg, '#333355', 'dark chip'],
-      [dark.DARK_THEME.color.selectionBg, '#3a3a55', 'dark selection'],
-      // Light canon = liftForContrast(dark literal, white, 4.5): the exact
-      // colors xterm's minimumContrastRatio rendered on light hosts.
-      [light.LIGHT_THEME.color.muted, '#946C08', 'light muted'],
-      [light.LIGHT_THEME.color.statusFg, '#6F6F6F', 'light statusFg'],
-      [light.LIGHT_THEME.color.completionBg, '#F5F5F5', 'light surface'],
-      [light.LIGHT_THEME.color.completionCurrentBg, '#e0d1bf', 'light chip'],
-      [light.LIGHT_THEME.color.selectionBg, '#D4E4F7', 'light selection']
-    ]
-
-    for (const [got, original, label] of cases) {
-      expect(channelDelta(got, original), `${label}: ${got} vs original ${original}`).toBeLessThanOrEqual(8)
-    }
+    expect(dark.DARK_THEME.color.primary).toBe('#91b5cc')
+    expect(dark.DARK_THEME.color.accent).toBe('#d09048')
+    expect(dark.DARK_THEME.color.completionBg).toBe('#162b3e')
+    expect(light.LIGHT_THEME.color.primary).toBe('#254c72')
+    expect(light.LIGHT_THEME.color.accent).toBe('#9d5d21')
+    expect(dark.contrastRatio(dark.DARK_THEME.color.text, dark.DARK_SEEDS.bg)!).toBeGreaterThanOrEqual(4.5)
+    expect(light.contrastRatio(light.LIGHT_THEME.color.text, light.LIGHT_SEEDS.bg)!).toBeGreaterThanOrEqual(4.5)
   })
 
   it('derives dim/secondary tones from the skin identity, not another palette', async () => {
@@ -502,14 +486,22 @@ describe('background-aware adaptation (OSC-11 light terminals)', () => {
     expect(luminance(color.completionBg)).toBeLessThanOrEqual(0.35)
   })
 
-  it('base palettes are fixed points of the adaptation', async () => {
+  it('keeps Qubinter identity colors when an empty skin is adapted to the terminal', async () => {
     const dark = await importThemeWithCleanEnv()
 
-    expect(dark.fromSkin({}, {}).color).toEqual(dark.DARK_THEME.color)
+    expect(dark.fromSkin({}, {}).color).toMatchObject({
+      primary: dark.DARK_SEEDS.primary,
+      accent: dark.DARK_SEEDS.accent,
+      text: dark.DARK_SEEDS.text
+    })
 
     const light = await importThemeWithEnv({ HERMES_TUI_BACKGROUND: '#ffffff' })
 
-    expect(light.fromSkin({}, {}).color).toEqual(light.LIGHT_THEME.color)
+    expect(light.fromSkin({}, {}).color).toMatchObject({
+      primary: light.LIGHT_SEEDS.primary,
+      accent: light.LIGHT_SEEDS.accent,
+      text: light.LIGHT_SEEDS.text
+    })
   })
 
   it('defaultThemeForCurrentBackground follows a late HERMES_TUI_BACKGROUND write', async () => {

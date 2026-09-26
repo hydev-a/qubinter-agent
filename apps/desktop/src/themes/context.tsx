@@ -30,7 +30,7 @@ import {
 } from './backend-sync'
 import { $chatFontFamily, resolveChatFontFamily } from './chat-font'
 import { harmonize, readableInk } from './color'
-import { BUILTIN_THEME_LIST, DEFAULT_SKIN_NAME, DEFAULT_TYPOGRAPHY, nousTheme } from './presets'
+import { BUILTIN_THEME_LIST, DEFAULT_SKIN_NAME, DEFAULT_TYPOGRAPHY, qubinterTheme } from './presets'
 import { retintTheme } from './retint'
 import type { DesktopTheme, DesktopThemeColors } from './types'
 import { $userThemes, listAllThemes, resolveTheme } from './user-themes'
@@ -157,7 +157,7 @@ function synthLightColors(seed: DesktopTheme): DesktopThemeColors {
 
 /** Returns the seed palette for a given skin + mode (no overrides applied). */
 export function getBaseColors(skinName: string, mode: 'light' | 'dark'): DesktopThemeColors {
-  const seed = resolveTheme(skinName) ?? nousTheme
+  const seed = resolveTheme(skinName) ?? qubinterTheme
 
   if (mode === 'dark') {
     return seed.darkColors ?? seed.colors
@@ -167,7 +167,7 @@ export function getBaseColors(skinName: string, mode: 'light' | 'dark'): Desktop
 }
 
 function deriveTheme(skinName: string, mode: 'light' | 'dark'): DesktopTheme {
-  const seed = resolveTheme(skinName) ?? nousTheme
+  const seed = resolveTheme(skinName) ?? qubinterTheme
 
   return {
     ...seed,
@@ -231,7 +231,7 @@ function applyTheme(theme: DesktopTheme, mode: 'light' | 'dark', chatFontFamily 
 
   const root = document.documentElement
   const c = theme.colors
-  const typo = { ...DEFAULT_TYPOGRAPHY, ...nousTheme.typography, ...theme.typography }
+  const typo = { ...DEFAULT_TYPOGRAPHY, ...qubinterTheme.typography, ...theme.typography }
   const rendered = renderedModeFor(c, mode)
   const isDark = rendered === 'dark'
   const midground = c.midground ?? c.ring
@@ -401,7 +401,7 @@ interface ThemeContextValue {
 const SKIN_LIST = BUILTIN_THEME_LIST.map(({ name, label, description }) => ({ name, label, description }))
 
 const ThemeContext = createContext<ThemeContextValue>({
-  theme: nousTheme,
+  theme: qubinterTheme,
   themeName: DEFAULT_SKIN_NAME,
   mode: 'light',
   resolvedMode: 'light',

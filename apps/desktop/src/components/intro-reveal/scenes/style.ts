@@ -1,9 +1,9 @@
 export const EASE = 'cubic-bezier(0.22, 1, 0.36, 1)'
 
-// Hermes blue: the app's --theme-primary (#0053fd), lightened for a dark background.
-export const BLUE = '#4d8dff'
-export const BLUE_DIM = 'rgba(77, 141, 255, 0.55)'
-export const BLUE_FAINT = 'rgba(77, 141, 255, 0.4)'
+// Qubinter steel blue, lifted for the dark introduction canvas.
+export const BLUE = '#91b5cc'
+export const BLUE_DIM = 'rgba(145, 181, 204, 0.55)'
+export const BLUE_FAINT = 'rgba(145, 181, 204, 0.4)'
 
 // One shadow for every floating surface. It follows --shadow-nous (single top
 // light, layered contact to ambient, x = 0, negative spread on each layer) at

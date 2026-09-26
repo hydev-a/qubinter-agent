@@ -1,13 +1,14 @@
 {
   "name": "hermes",
-  "productName": "Hermes",
+  "productName": "Qubinter",
   "private": true,
   "version": "0.0.0",
-  "description": "Native desktop shell for Hermes Agent.",
-  "author": "Nous Research",
+  "description": "Qubinter Agent desktop app for industries and businesses.",
+  "author": "Qubinter Agent contributors",
+  "contributors": ["Nous Research"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NousResearch/hermes-agent.git"
+    "url": "git+https://github.com/hydev-a/qubinter-agent.git"
   },
   "type": "module",
   "main": "dist/electron-main.mjs",

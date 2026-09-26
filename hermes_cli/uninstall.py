@@ -1015,13 +1015,13 @@ def _perform_uninstall(
     for line, col in _RELOAD_HINT[windows]:
         print(color(line, col) if col else line)
     print()
-    print("Thank you for using Hermes Agent! ☤")
+    print("Thank you for using Qubinter Agent! ◈")
     print()
 
 
 _REINSTALL_HINT = {
-    True: "  iex (irm https://hermes-agent.nousresearch.com/install.ps1)",
-    False: "  curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash"}
+    True: "  iex (irm https://raw.githubusercontent.com/hydev-a/qubinter-agent/main/scripts/install.ps1)",
+    False: "  curl -fsSL https://raw.githubusercontent.com/hydev-a/qubinter-agent/main/scripts/install.sh | bash"}
 # windows -> [(line, color or None)]
 _RELOAD_HINT = {
     True: [("Open a new terminal (PowerShell / Windows Terminal) to pick up", Colors.YELLOW),

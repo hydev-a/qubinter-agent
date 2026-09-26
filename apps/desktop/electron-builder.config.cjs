@@ -5,7 +5,7 @@
 // how the two halves drift.
 //
 // A .cjs module (not JSON) so the variant is decided at require time:
-// HERMES_DESKTOP_VARIANT=light builds "Hermes Light". The whole config
+// HERMES_DESKTOP_VARIANT=light builds "Qubinter Light". The whole config
 // derives from that one flag.
 // @ts-check
 'use strict'
@@ -55,7 +55,7 @@ const channelRequest = channelBuildRequest()
 
 /** @typedef {import("app-builder-lib").Configuration} Configuration */
 
-const [owner, repo] = (process.env.GITHUB_REPOSITORY || 'NousResearch/hermes-agent').split('/')
+const [owner, repo] = (process.env.GITHUB_REPOSITORY || 'hydev-a/qubinter-agent').split('/')
 if (!owner || !repo) {
   throw new Error(`invalid GITHUB_REPOSITORY ${process.env.GITHUB_REPOSITORY}`)
 }
@@ -83,7 +83,7 @@ module.exports = {
   // so it can't collide with the out-of-store MSIX of the same tag/arch, and
   // the release pipeline can keep the two apart.
   artifactName: `${store ? 'Store-' : ''}${artifactNamePascal}-\${version}-\${os}-\${arch}.\${ext}`,
-  icon: 'assets/icon',
+  icon: 'assets/qubinter-icon',
   // The electron-updater feed. CI builds set CLOUDFLARE_R2_PUBLIC_URL (the R2
   // public bucket / custom domain) and publish there — the feed yml, blockmaps
   // and installers all live in the same flat R2 bucket, and electron-updater
@@ -130,7 +130,7 @@ module.exports = {
       ? [{ from: 'build/agent-payload', to: 'agent-payload' }]
       : []),
     {
-      from: 'assets/icon.ico',
+      from: 'assets/qubinter-icon.ico',
       to: 'icon.ico'
     }
   ],
@@ -187,7 +187,7 @@ module.exports = {
   dmg: {
     // Avoid the failing optional APFS shrink pass; keep compressed conversion.
     shrink: false,
-    title: 'Hermes Agent Installer',
+    title: 'Qubinter Agent Installer',
     // A prebuilt .tiff on purpose, not a PNG plus a @2x sibling: dmg-builder's
     // PNG path runs `tiffutil -cathidpicheck`, which on macOS 26 rewrites both
     // frames to 72 dpi and silently drops the 2x representation. A .tiff is
@@ -260,8 +260,8 @@ module.exports = {
     category: 'Development',
     maintainer: 'Nous Research <support@nousresearch.com>',
     synopsis: light
-      ? 'Remote-only desktop client for Hermes Agent.'
-      : 'Native desktop shell for Hermes Agent.',
+      ? 'Remote-only desktop client for Qubinter Agent.'
+      : 'Qubinter Agent desktop app for industries and businesses.',
     target: ['AppImage']
   }
 }
